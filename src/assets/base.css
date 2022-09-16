@@ -1,5 +1,22 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trirong:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --white-palette: #fbfbfb;
+  --green-palette: #006726;
+  --black-palette: #212120;
+  --semiblack-palette: rgba(0, 0, 0, 0.634);
+  --big-size-title: "Lato", sans-serif;
+  --small-size-title: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--big-size-title);
+  font-weight: bold;
 }

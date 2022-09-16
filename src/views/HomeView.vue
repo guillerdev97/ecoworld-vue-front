@@ -1,5 +1,16 @@
-<script></script>
+<script>
+import TheHeader from "../components/TheHeader.vue";
+import TheCarousel from "../components/TheCarousel.vue";
+export default {
+  name: "HomeView",
+  components: { TheHeader, TheCarousel },
+};
+</script>
 
-<template>This is home view</template>
+<template>
+  <TheHeader />
 
-<style></style>
+  <TheCarousel />
+</template>
+
+<style scoped></style>
