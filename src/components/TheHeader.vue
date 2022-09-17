@@ -30,7 +30,6 @@ header {
   width: 100%;
   height: 175px;
   background-color: var(--white-palette);
-  box-shadow: 0 0 8px rgb(185, 185, 185);
 }
 h1 {
   cursor: pointer;
