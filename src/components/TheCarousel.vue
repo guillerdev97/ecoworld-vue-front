@@ -86,7 +86,7 @@
 }
 #corporation img {
   margin-top: 15px;
-  width: 20%;
+  width: 15%;
   border-radius: 10px;
 }
 #corporation h1 {
@@ -105,8 +105,8 @@
   background-color: rgb(246, 173, 17);
 }
 #motivation img {
-  width: 15%;
-  margin-top: 30px;
+  width: 12%;
+  margin-top: 20px;
   border-radius: 10px;
 }
 #motivation h1 {
@@ -126,8 +126,8 @@
   background-color: #a83e55;
 }
 #product img {
-  width: 18%;
-  margin-top: 38px;
+  width: 15%;
+  margin-top: 28px;
   border-radius: 10px;
 }
 #product h1 {

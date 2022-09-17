@@ -2,9 +2,10 @@
 import TheHeader from "../components/TheHeader.vue";
 import TheCarousel from "../components/TheCarousel.vue";
 import TheFooter from "../components/TheFooter.vue";
+import TheCard from "../components/TheCard.vue";
 export default {
   name: "HomeView",
-  components: { TheHeader, TheCarousel, TheFooter },
+  components: { TheHeader, TheCarousel, TheFooter, TheCard },
 };
 </script>
 
@@ -33,6 +34,13 @@ export default {
     <div id="img" class="d-flex justify-content-center align-items-center">
       <img src="../assets/img/apple.jpeg" alt="apple" />
     </div>
+  </section>
+
+  <section
+    id="releases"
+    class="d-flex justify-content-center align-items-center"
+  >
+    <TheCard />
   </section>
 
   <TheFooter />
@@ -70,5 +78,10 @@ img {
   width: 70%;
   height: 280px;
   border-radius: 5px;
+}
+/*  */
+#releases {
+  height: 400px;
+  background-color: var(--beige-palette);
 }
 </style>
