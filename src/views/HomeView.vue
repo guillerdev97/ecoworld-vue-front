@@ -37,10 +37,16 @@ export default {
   </section>
 
   <section
-    id="releases"
+    id="release"
     class="d-flex justify-content-center align-items-center"
   >
-    <TheCard />
+    <div id="card">
+      <TheCard />
+    </div>
+
+    <h1 class="fs-1">
+      NEW RELEASE<br /><br /><span class="brown">OF THE MONTH</span>
+    </h1>
   </section>
 
   <TheFooter />
@@ -80,8 +86,18 @@ img {
   border-radius: 5px;
 }
 /*  */
-#releases {
+#release {
+  width: 100%;
   height: 400px;
   background-color: var(--beige-palette);
+}
+#release #card {
+  width: 45%;
+}
+#release h1 {
+  color: rgb(145, 104, 51);
+}
+#release .brown {
+  margin-left: -13px;
 }
 </style>
