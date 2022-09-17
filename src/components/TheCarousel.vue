@@ -16,7 +16,7 @@
           <img src="../assets/img/planta.png" alt="plant" />
 
           <div>
-            <h1>We are <span>EcoAsturias</span></h1>
+            <h1>We are <span>EcoAstur</span></h1>
             <p>the new corporation that promotes the organic food</p>
           </div>
         </div>
@@ -64,6 +64,7 @@
 
 <style scoped>
 @import "../assets/base.css";
+/*  */
 #carouselExampleControls {
   width: 100%;
   height: 300px;
@@ -81,7 +82,7 @@
 }
 /*  */
 #corporation {
-  background-color: #a0b242;
+  background-color: var(--lightgreen-palette);
 }
 #corporation img {
   margin-top: 15px;

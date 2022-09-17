@@ -25,12 +25,13 @@
 
 <style scoped>
 @import "../assets/base.css";
-
+/*  */
 header {
   width: 100%;
   height: 175px;
   background-color: var(--white-palette);
 }
+/*  */
 h1 {
   cursor: pointer;
   font-size: 60px;
@@ -56,7 +57,7 @@ p {
   font-size: 16px;
   text-shadow: 1px 1px;
 }
-
+/*  */
 nav {
   width: 100%;
   height: 40px;
