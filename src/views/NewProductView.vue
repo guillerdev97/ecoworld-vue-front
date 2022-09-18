@@ -1,20 +1,49 @@
 <script>
 export default {
   name: "NewProductView",
+  data() {
+    return {
+      form: {
+        name: "",
+        price: "",
+        description: "",
+      },
+    };
+  },
+  methods: {
+    createProduct() {
+      this.$http.post(
+        "http://localhost:8080/api/v1/products/create",
+        this.form
+      );
+    },
+  },
 };
 </script>
 
 <template>
-  <form>
+  <form @submit.prevent="createProduct">
     <div class="form-group">
       <label for="exampleFormControlInput1">Product Name:</label>
       <input
         type="text"
         class="form-control"
+        name="name"
         id="exampleFormControlInput1"
+        v-model="this.form.name"
       />
     </div>
     <div class="form-group">
+      <label for="exampleFormControlInput1">Product Price:</label>
+      <input
+        type="number"
+        class="form-control"
+        name="price"
+        id="exampleFormControlInput1"
+        v-model="this.form.price"
+      />
+    </div>
+    <!-- <div class="form-group">
       <label for="exampleFormControlSelect1">Product Category:</label>
       <select class="form-control" id="exampleFormControlSelect1">
         <option>Cereales en grano</option>
@@ -23,15 +52,18 @@ export default {
         <option>Carnes</option>
         <option>Pescados</option>
       </select>
-    </div>
+    </div> -->
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Product Description:</label>
       <textarea
         class="form-control"
+        name="description"
+        v-model="this.form.description"
         id="exampleFormControlTextarea1"
         rows="3"
         cols="10"
       ></textarea>
+      <button type="submit">Create Product</button>
     </div>
   </form>
 </template>
