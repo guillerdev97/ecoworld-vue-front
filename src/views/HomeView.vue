@@ -1,17 +1,13 @@
 <script>
-import TheHeader from "../components/TheHeader.vue";
 import TheCarousel from "../components/TheCarousel.vue";
-import TheFooter from "../components/TheFooter.vue";
 import TheCard from "../components/TheCard.vue";
 export default {
   name: "HomeView",
-  components: { TheHeader, TheCarousel, TheFooter, TheCard },
+  components: { TheCarousel, TheCard },
 };
 </script>
 
 <template>
-  <TheHeader />
-
   <TheCarousel />
 
   <section
@@ -48,8 +44,6 @@ export default {
       NEW RELEASE<br /><br /><span class="brown">OF THE MONTH</span>
     </h1>
   </section>
-
-  <TheFooter />
 </template>
 
 <style scoped>

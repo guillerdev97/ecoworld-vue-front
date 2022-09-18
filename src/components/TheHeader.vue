@@ -4,7 +4,9 @@
   <header class="d-flex flex-column justify-content-center align-items-center">
     <div class="d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex justify-content-center align-items-center">
-        <h1><span>ECO</span>WORLD</h1>
+        <router-link to="/"
+          ><h1><span>ECO</span>WORLD</h1></router-link
+        >
 
         <img class="align-self-start" src="../assets/img/leaf.png" alt="tree" />
       </div>
@@ -14,10 +16,17 @@
 
     <nav class="d-flex justify-content-center align-items-center">
       <ul class="d-flex justify-content-around align-items-center">
-        <li>ABOUT US</li>
-        <li>ECO PRODUCTS</li>
-        <li>ECO RECIPES</li>
-        <li>REACH US</li>
+        <li><router-link to="/about">ABOUT US</router-link></li>
+        <li class="dropdown">
+          <router-link to="/products"><a>ECO PRODUCTS</a></router-link>
+          <ul class="dropdownContent">
+            <li><a>CEREALS</a></li>
+            <li><a>FRUITS</a></li>
+            <li><a>MEAT</a></li>
+          </ul>
+        </li>
+        <li><a>ECO RECIPES</a></li>
+        <li><a>REACH US</a></li>
       </ul>
     </nav>
   </header>
@@ -37,6 +46,9 @@ h1 {
   font-size: 60px;
   letter-spacing: 2px;
   text-shadow: 1px 1px;
+}
+h1:hover {
+  color: black;
 }
 span {
   color: var(--green-palette);
@@ -75,7 +87,19 @@ li {
 li:hover {
   color: var(--green-palette);
 }
-
+/*  */
+.dropdownContent {
+  display: none;
+  transform-origin: top bottom;
+  transition: all 0.5s ease;
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+  position: absolute;
+  width: 100%;
+  background-color: var(--beige-palette);
+  z-index: 9;
+}
 @keyframes leftToRight {
   100% {
     transform: rotateZ(360deg);
