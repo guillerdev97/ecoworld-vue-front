@@ -39,10 +39,14 @@ export default {
         <li>Carnes</li>
         <li>Pescados</li>
       </ul>
+
+      <router-link to="/create"><h1>Add new product</h1></router-link>
     </div>
 
-    <div id="productsSection" v-for="product in products" :key="product">
-      <TheCard :name="product.name" :price="product.price" />
+    <div id="productsSection">
+      <div v-for="product in products" :key="product">
+        <TheCard :product="product" />
+      </div>
     </div>
   </main>
 </template>
@@ -63,6 +67,8 @@ ul {
   list-style-type: none;
 }
 #productsSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 50%;
   min-height: 500px;
   border: 1px solid black;
