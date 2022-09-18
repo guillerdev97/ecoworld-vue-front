@@ -1,29 +1,13 @@
-<script>
-export default {
-  name: "TheCard",
-  props: {
-    name: {
-      type: String,
-      required: true,
-    },
-    price: {
-      type: Number,
-      required: true,
-    },
-  },
-};
-</script>
+<script></script>
 
 <template>
   <div id="card">
     <img src="../assets/img/tomate.jpg" alt="tomatoes" />
     <div id="body">
-      <h1 class="fs-3 text-white text-center fw-bold pt-2">
-        {{ name }}
-      </h1>
+      <h1 class="fs-3 text-white text-center fw-bold pt-2">Red Tomatoes</h1>
       <p class="text-white text-center fw-bold">
         Origin: Asturias<br />
-        Price: {{ price }}
+        Price: 12.3$
       </p>
       <a href="#"><button class="btn btn-success">Contact</button></a>
     </div>

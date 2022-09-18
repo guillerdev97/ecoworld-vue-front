@@ -1,4 +1,5 @@
 <script>
+import TheCard from "../components/TheCard.vue";
 export default {
   name: "ProductsView",
   data() {
@@ -19,6 +20,7 @@ export default {
   created() {
     this.getAllProducts();
   },
+  components: { TheCard },
 };
 </script>
 
@@ -39,7 +41,9 @@ export default {
       </ul>
     </div>
 
-    <div id="productsSection"></div>
+    <div id="productsSection" v-for="product in products" :key="product">
+      <TheCard :name="product.name" :price="product.price" />
+    </div>
   </main>
 </template>
 

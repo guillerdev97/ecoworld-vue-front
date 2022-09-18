@@ -1,9 +1,9 @@
 <script>
 import TheCarousel from "../components/TheCarousel.vue";
-import TheCard from "../components/TheCard.vue";
+import TheCardRelease from "../components/TheCardRelease.vue";
 export default {
   name: "HomeView",
-  components: { TheCarousel, TheCard },
+  components: { TheCarousel, TheCardRelease },
 };
 </script>
 
@@ -37,7 +37,7 @@ export default {
     class="d-flex justify-content-center align-items-center"
   >
     <div id="card">
-      <TheCard />
+      <TheCardRelease />
     </div>
 
     <h1 class="fs-1">
