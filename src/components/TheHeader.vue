@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <header class="d-flex flex-column justify-content-center align-items-center">
+  <header class="d-flex flex-column justify-content-center align-items-center sticky-top">
     <div class="d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex justify-content-center align-items-center">
         <router-link to="/"
@@ -25,8 +25,8 @@
             <li><a>MEAT</a></li>
           </ul>
         </li>
-        <li><a>ECO RECIPES</a></li>
-        <li><a>REACH US</a></li>
+        <li><router-link to="/recipes">ECO RECIPES</router-link></li>
+        <li><router-link to="/reach">REACH US</router-link></li>
       </ul>
     </nav>
   </header>
@@ -64,7 +64,7 @@ img:hover {
   animation: leftToRight 0.5s ease-in;
 }
 p {
-  margin-top: -17px;
+  margin-top: -15px;
   margin-right: 50px;
   font-size: 16px;
   text-shadow: 1px 1px;

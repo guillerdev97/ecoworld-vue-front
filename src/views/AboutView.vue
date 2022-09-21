@@ -23,7 +23,7 @@ export default {
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        More about us
+        More about us!
       </button>
 
       <!-- Modal -->
@@ -130,6 +130,7 @@ export default {
 #modalButton {
   box-shadow: none;
   margin-top: 30px;
+  font-weight: bold;
   border: 1px solid white;
   color: white;
   background-color: rgb(174, 115, 34);

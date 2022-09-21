@@ -46,8 +46,8 @@ export default {
 @import "../assets/base.css";
 
 #card {
-  width: 300px;
-  height: 350px;
+  width: 200px;
+  height: 250px;
   border: 2px solid var(--brown-palette);
   border-radius: 5px;
   transition: all 0.2s ease-in;
@@ -60,12 +60,12 @@ export default {
 img {
   display: block;
   width: 100%;
-  height: 175px;
+  height: 100px;
   border-radius: 5px;
 }
 #body {
   width: 100%;
-  height: 171px;
+  height: 146px;
   background-color: var(--brown-palette);
   border-radius: 0 0 3px 3px;
 }
@@ -73,5 +73,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.btn {
+  font-size: 12px;
+  padding: 3px;
 }
 </style>
