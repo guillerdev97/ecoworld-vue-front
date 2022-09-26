@@ -5,20 +5,24 @@ export default {
   data() {
     return {
       products: [],
+      categories: [],
     };
   },
   methods: {
-    async getAllProducts() {
-      const products = await this.$http.get(
-        "http://localhost:8080/api/v1/products"
-      );
-      const productsData = products.data;
-      this.products = productsData;
-      console.log(this.products);
-    },
+    /*  getAllProducts() {
+      this.$http
+        .get("/products")
+        .then((productsData) => {
+          this.products = productsData.data;
+          console.log(this.products);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }, */
   },
   created() {
-    this.getAllProducts();
+    /*   this.getAllProducts(); */
   },
   components: { TheCard },
 };
@@ -33,19 +37,15 @@ export default {
       <h1>ALL PRODUCTS</h1>
 
       <ul>
-        <li>Cereales en grano</li>
-        <li>Frutas</li>
-        <li>Hortalizas</li>
-        <li>Carnes</li>
-        <li>Pescados</li>
+        <li></li>
       </ul>
 
       <router-link to="/create"><h2>*Add new product</h2></router-link>
     </div>
 
     <div id="productsSection">
-      <div class="m-auto mt-3 ml-3 mr-3 mb-3" v-for="product in products" :key="product">
-        <TheCard :product="product" />
+      <div class="m-auto mt-3 ml-3 mr-3 mb-3">
+        <TheCard />
       </div>
     </div>
   </main>
@@ -63,10 +63,9 @@ h1 {
   margin-bottom: 20px;
   font-size: 18px;
   text-align: left;
-}
-h1:hover {
   text-decoration: underline;
 }
+
 ul {
   list-style-type: none;
 }
@@ -91,10 +90,10 @@ h2:hover {
 #productsSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 60%;
+  width: 70%;
   margin-top: 25px;
   margin-bottom: 35px;
-  min-height: 500px;
+  max-height: 700px;
   border: 3px solid #d0b272b6;
   border-radius: 1px;
   overflow-y: scroll;

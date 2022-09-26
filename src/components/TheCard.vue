@@ -75,7 +75,6 @@ a {
   align-items: center;
 }
 
-
 .btn {
   font-size: 12px;
   padding: 3px;

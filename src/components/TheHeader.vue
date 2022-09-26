@@ -1,7 +1,9 @@
 <script></script>
 
 <template>
-  <header class="d-flex flex-column justify-content-center align-items-center sticky-top">
+  <header
+    class="d-flex flex-column justify-content-center align-items-center sticky-top"
+  >
     <div class="d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex justify-content-center align-items-center">
         <router-link to="/"
@@ -18,7 +20,7 @@
       <ul class="d-flex justify-content-around align-items-center">
         <li><router-link to="/about">ABOUT US</router-link></li>
         <li class="dropdown">
-          <router-link to="/products"><a>ECO PRODUCTS</a></router-link>
+          <router-link to="/allproducts"><a>ECO PRODUCTS</a></router-link>
           <ul class="dropdownContent">
             <li><a>CEREALS</a></li>
             <li><a>FRUITS</a></li>
