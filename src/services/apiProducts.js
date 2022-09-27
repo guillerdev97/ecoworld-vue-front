@@ -18,7 +18,4 @@ export const apiProducts = {
   updateProduct(formData) {
     return axios.put(baseUrl + "/products/edit" + formData);
   },
-  getAllCategories() {
-    return axios.get(baseUrl + "/categories");
-  },
 };

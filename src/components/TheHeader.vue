@@ -19,14 +19,7 @@
     <nav class="d-flex justify-content-center align-items-center">
       <ul class="d-flex justify-content-around align-items-center">
         <li><router-link to="/about">ABOUT US</router-link></li>
-        <li class="dropdown">
-          <router-link to="/allproducts"><a>ECO PRODUCTS</a></router-link>
-          <ul class="dropdownContent">
-            <li><a>CEREALS</a></li>
-            <li><a>FRUITS</a></li>
-            <li><a>MEAT</a></li>
-          </ul>
-        </li>
+        <li><router-link to="/allproducts">ECO PRODUCTS</router-link></li>
         <li><router-link to="/recipes">ECO RECIPES</router-link></li>
         <li><router-link to="/reach">REACH US</router-link></li>
       </ul>
