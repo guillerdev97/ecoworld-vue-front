@@ -32,7 +32,7 @@ export default {
       </h1>
       <p class="text-white text-center fw-bold mt-1">
         Origin: Asturias<br />
-        Price: {{ product.price }}
+        Price: {{ product.price }} €/kg
       </p>
       <div
         class="buttons mt-4 d-flex justify-content-around align-items-center"
