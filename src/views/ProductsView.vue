@@ -1,29 +1,70 @@
 <script>
+import { apiProducts } from "../services/apiProducts.js";
+import { apiCategories } from "../services/apiCategories.js";
+
 import TheCard from "../components/TheCard.vue";
+
 export default {
   name: "ProductsView",
+
   data() {
     return {
       products: [],
       categories: [],
+      categoriesStatus: [],
     };
   },
+
   methods: {
-    /*  getAllProducts() {
-      this.$http
-        .get("/products")
-        .then((productsData) => {
-          this.products = productsData.data;
-          console.log(this.products);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    }, */
+    async getAllProducts() {
+      const data = await apiProducts.getAllProducts();
+
+      const productsData = data.data;
+
+      this.products = productsData;
+      console.log(this.products);
+    },
+
+    async getAllCategories() {
+      const data = await apiProducts.getAllCategories();
+
+      const categoriesData = data.data;
+
+      this.categories = categoriesData;
+    },
+
+    async filterCategories() {
+      const data = await apiCategories.getAllCategories();
+
+      const categoriesData = data.data;
+
+      const categoriesName = [];
+      categoriesData.forEach((categorie) => {
+        const name = categorie.name;
+
+        categoriesName.push(name);
+      });
+
+      categoriesName.forEach((categorie) => {
+        const obj = {
+          name: categorie,
+          status: false,
+          checked: false,
+        };
+
+        this.categoriesStatus.push(obj);
+      });
+
+      console.log(this.categoriesStatus);
+    },
   },
+
   created() {
-    /*   this.getAllProducts(); */
+    this.getAllProducts();
+    this.getAllCategories();
+    this.filterCategories();
   },
+
   components: { TheCard },
 };
 </script>
@@ -36,16 +77,32 @@ export default {
     >
       <h1>ALL PRODUCTS</h1>
 
-      <ul>
-        <li></li>
-      </ul>
+      <form>
+        <legend>Choose one or more categories:</legend>
+        <div v-for="(categorie, index) in categories" :key="index">
+          <input
+            type="checkbox"
+            id="{{ categorie.name }}"
+            value="{{ categorie.name }}"
+            v-model="categorie.checked"
+            v-bind:index="categorie.index"
+          />
+          <label>{{ categorie.name }}</label>
+          <br />
+        </div>
+        <button type="submit">Filtrar</button>
+      </form>
 
       <router-link to="/create"><h2>*Add new product</h2></router-link>
     </div>
 
     <div id="productsSection">
-      <div class="m-auto mt-3 ml-3 mr-3 mb-3">
-        <TheCard />
+      <div
+        class="m-auto mt-3 ml-3 mr-3 mb-3"
+        v-for="(product, index) in products"
+        :key="index"
+      >
+        <TheCard :src="product.img" :product="product" />
       </div>
     </div>
   </main>

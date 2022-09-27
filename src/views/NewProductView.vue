@@ -1,4 +1,6 @@
 <script>
+import { apiProducts } from "../services/apiProducts.js";
+
 export default {
   name: "NewProductView",
   data() {
@@ -11,11 +13,9 @@ export default {
     };
   },
   methods: {
-    createProduct() {
-      this.$http.post(
-        "http://localhost:8080/api/v1/products/create",
-        this.form
-      );
+    async createProduct() {
+      const response = await apiProducts.createProduct(this.form);
+      console.log(response);
     },
   },
 };
@@ -30,17 +30,17 @@ export default {
         class="form-control"
         name="name"
         id="exampleFormControlInput1"
-        v-model="this.form.name"
+        v-model="form.name"
       />
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">Product Price:</label>
       <input
-        type="number"
+        type="float"
         class="form-control"
         name="price"
         id="exampleFormControlInput1"
-        v-model="this.form.price"
+        v-model="form.price"
       />
     </div>
     <!-- <div class="form-group">
@@ -58,7 +58,7 @@ export default {
       <textarea
         class="form-control"
         name="description"
-        v-model="this.form.description"
+        v-model="form.description"
         id="exampleFormControlTextarea1"
         rows="3"
         cols="10"

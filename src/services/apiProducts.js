@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:8080/api/v1/";
+const baseUrl = "http://localhost:8080/api/v1";
 
-export const api = {
+export const apiProducts = {
   getAllProducts() {
     return axios.get(baseUrl + "/products");
   },
@@ -17,5 +17,8 @@ export const api = {
   },
   updateProduct(formData) {
     return axios.put(baseUrl + "/products/edit" + formData);
+  },
+  getAllCategories() {
+    return axios.get(baseUrl + "/categories");
   },
 };

@@ -6,6 +6,11 @@ export default {
       type: Object,
       required: true,
     },
+
+    src: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     deleteProduct(id) {
@@ -20,7 +25,7 @@ export default {
 
 <template>
   <div id="card">
-    <img src="../assets/img/tomate.jpg" alt="tomatoes" />
+    <img :src="product.img" alt="" />
     <div id="body">
       <h1 class="fs-3 text-white text-center fw-bold pt-2">
         {{ product.name }}
@@ -61,7 +66,6 @@ img {
   display: block;
   width: 100%;
   height: 100px;
-  border-radius: 5px;
 }
 #body {
   width: 100%;

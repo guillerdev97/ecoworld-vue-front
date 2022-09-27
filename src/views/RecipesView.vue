@@ -26,9 +26,12 @@
   <section id="recipesSection">
     <div id="grid" class="container">
       <div class="row">
-        <div id="recipeCards" class="col-sm">recipe</div>
-        <div class="col-sm">recipe</div>
-        <div class="col-sm">recipe</div>
+        <div class="col-sm recipeCard">
+          <img src="" alt="" />
+          <p></p>
+        </div>
+        <div class="col-sm recipeCard"></div>
+        <div class="col-sm recipeCard"></div>
       </div>
     </div>
   </section>
@@ -84,13 +87,16 @@
 
 #grid {
   width: 80%;
-  margin: 10px auto;
+  margin: auto;
+  padding: 20px;
   border: 1px solid black;
 }
 
-#recipeCards {
-  width: 30%;
-  height: 50px;
+.recipeCard {
+  width: 25%;
+  height: 280px;
+  margin: 15px;
   border: 1px solid black;
 }
+
 </style>
