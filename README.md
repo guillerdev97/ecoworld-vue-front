@@ -88,3 +88,39 @@ Start the server
   npm run dev
 ```
 
+## Work methodology
+
+- TDD
+- Agile
+- Scrum
+
+
+## Versions
+
+
+#### Tools and technologies used
+
+| Front End | Back End | Diseño y organización | 
+| :---: | :---: | :---: |
+| <img src="https://github.com/Yelose/Yelose/blob/main/img/vscode.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/html.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/bootstrap.png">  <img src="https://github.com/Yelose/Yelose/blob/main/img/css.png"> <img src="https://camo.githubusercontent.com/bcd4bda49ef6cd9537db065920f4f4f6ac670eae0e0adf2c5133c19b319f1574/68747470733a2f2f627261646c632e67616c6c65727963646e2e76736173736574732e696f2f657874656e73696f6e732f627261646c632f7673636f64652d7461696c77696e646373732f302e322e302f313535383034303536333634392f4d6963726f736f66742e56697375616c53747564696f2e53657276696365732e49636f6e732e44656661756c74"> | <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3_893T2dAaGeZ6fb9y9rZxc9Cu-TnUKx0Q&usqp=CAU">  <img src="https://github.com/Yelose/Yelose/blob/main/img/java.png">  <img src="https://github.com/Yelose/Yelose/blob/main/img/mysql.png"> | <img src="https://github.com/Yelose/Yelose/blob/main/img/figma.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/jira.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/google.png">  |
+
+
+## Documentation
+
+- [Presentation PPTX]
+- [Prototype]
+- [UserFlow]
+
+
+## Authors
+
+| Nombre | Roll | <img src="https://github.com/Yelose/Yelose/blob/main/img/github.png" width="30px" height="30px"> |
+| :--- | :---: | :---: |
+| Guillermo García | Product Owner | https://github.com/guillerdev97 |
+
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
