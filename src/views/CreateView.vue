@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     async createProduct() {
-      const response = await apiProducts.createProduct(this.form);
+      const response = await apiProducts.create(this.form);
       console.log(response);
     },
   },

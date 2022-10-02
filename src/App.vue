@@ -1,9 +1,9 @@
 <script>
 import { RouterView } from "vue-router";
-import TheHeader from "./components/header/TheHeader.vue";
-import TheHeaderCreate from "./components/header/TheHeaderCreate.vue";
-import TheFooter from "./components/footer/TheFooter.vue";
-import TheFooterCreate from "./components/footer/TheFooterCreate.vue";
+import TheHeader from "./components/TheHeader.vue";
+import TheHeaderCreate from "./components/TheHeaderCreate.vue";
+import TheFooter from "./components/TheFooter.vue";
+import TheFooterCreate from "./components/TheFooterCreate.vue";
 
 export default {
   name: "App",

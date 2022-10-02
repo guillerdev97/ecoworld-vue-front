@@ -164,8 +164,6 @@ export default {
   margin: auto;
   align-items: center;
 }
-#search .results {
-}
 
 main {
   padding-left: 120px;
@@ -242,20 +240,3 @@ nav {
   color: var(--green-palette);
 }
 </style>
-
-
-
-
-/*  */
-.dropdownContent {
-  display: none;
-  transform-origin: top bottom;
-  transition: all 0.5s ease;
-}
-.dropdown:hover .dropdownContent {
-  display: block;
-  position: absolute;
-  width: 100%;
-  background-color: var(--beige-palette);
-  z-index: 9;
-}
