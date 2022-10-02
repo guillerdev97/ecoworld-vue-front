@@ -9,6 +9,7 @@ export default {
 
   data() {
     return {
+      input: "",
       products: [],
       categories: [],
       categoriesState: [],
@@ -43,6 +44,16 @@ export default {
 
       this.products = await categories.filter(this.products, checkedCategories);
     },
+
+    filterProducts() {
+      if (this.input.length > 0) {
+        this.focus = true;
+      }
+
+      return this.products.filter((product) =>
+        product.name.toLowerCase().includes(this.input.toLowerCase())
+      );
+    },
   },
 
   created() {
@@ -55,6 +66,28 @@ export default {
 </script>
 
 <template>
+  <section id="search" class="mt-5 text-center">
+    <input
+      type="text"
+      v-on:focus="filterProducts"
+      v-model="input"
+      placeholder="Search products..."
+    />
+
+    <div class="results">
+      <div v-for="(product, index) in filterProducts()" :key="index">
+        <router-link :to="{ path: '/detail' }">
+          <p v-if="this.input.length > 0">
+            {{ product.name }}
+          </p>
+        </router-link>
+      </div>
+      <div v-if="input && !filterProducts().length">
+        <p>No results found!</p>
+      </div>
+    </div>
+  </section>
+
   <main class="d-flex justify-content-around align-items-start">
     <div
       id="categoriesSection"
@@ -134,6 +167,17 @@ export default {
 
 <style scoped>
 @import "../assets/base.css";
+
+#search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin: auto;
+  align-items: center;
+}
+#search .results {
+}
 
 main {
   padding-left: 120px;
