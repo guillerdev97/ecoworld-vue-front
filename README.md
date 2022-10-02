@@ -96,7 +96,8 @@ Start the server
 
 
 ## Versions
-
+Main branch
+Develop branch
 
 #### Tools and technologies used
 
