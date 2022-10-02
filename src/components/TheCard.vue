@@ -1,4 +1,6 @@
 <script>
+import EditProduct from "./EditProduct.vue";
+
 export default {
   name: "TheCard",
   props: {
@@ -20,6 +22,8 @@ export default {
         .then(location.reload());
     },
   },
+
+  components: { EditProduct },
 };
 </script>
 
@@ -41,7 +45,7 @@ export default {
         <button v-on:click="deleteProduct(product.id)" class="btn btn-danger">
           Delete
         </button>
-        <a href="#"><button class="btn btn-primary">Update</button></a>
+        <div><EditProduct :product="product" /></div>
       </div>
     </div>
   </div>

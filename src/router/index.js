@@ -39,6 +39,11 @@ const router = createRouter({
       name: "reach",
       component: ReachView,
     },
+    {
+      path: "/edit",
+      name: "edit",
+      component: ReachView,
+    },
   ],
 });
 

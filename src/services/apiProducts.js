@@ -3,19 +3,19 @@ import axios from "axios";
 const baseUrl = "http://localhost:8080/api/v1";
 
 export const apiProducts = {
-  getAllProducts() {
+  list() {
     return axios.get(baseUrl + "/products");
   },
-  getProduct(id) {
+  getDetail(id) {
     return axios.get(baseUrl + `/product/${id}`);
   },
-  deleteProduct(id) {
+  delete(id) {
     return axios.delete(baseUrl + `/product/delete/${id}`);
   },
-  createProduct(formData) {
+  create(formData) {
     return axios.post(baseUrl + "/products/create", formData);
   },
-  updateProduct(formData) {
-    return axios.put(baseUrl + "/products/edit" + formData);
+  update(formData) {
+    return axios.put(baseUrl + "/products/edit", formData);
   },
 };

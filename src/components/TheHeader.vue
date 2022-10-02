@@ -22,6 +22,7 @@
         <li><router-link to="/allproducts">ECO PRODUCTS</router-link></li>
         <li><router-link to="/recipes">ECO RECIPES</router-link></li>
         <li><router-link to="/reach">REACH US</router-link></li>
+        <li><router-link to="/edit">EDIT</router-link></li>
       </ul>
     </nav>
   </header>

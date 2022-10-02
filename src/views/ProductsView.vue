@@ -1,6 +1,7 @@
 <script>
 import { apiProducts } from "../services/apiProducts.js";
 import { apiCategories } from "../services/apiCategories.js";
+import { categories } from "../services/categoriesFunctions.js";
 import TheCard from "../components/TheCard.vue";
 
 export default {
@@ -10,71 +11,43 @@ export default {
     return {
       products: [],
       categories: [],
-      categoriesStatus: [],
+      categoriesState: [],
       NUM_RESULTS: 4,
       pag: 1,
     };
   },
 
   methods: {
-    async getAllProducts() {
-      const data = await apiProducts.getAllProducts();
+    async listProducts() {
+      const response = await apiProducts.list();
 
-      const productsData = data.data;
+      const productsData = response.data;
 
       this.products = productsData;
     },
 
-    async getAllCategories() {
-      const data = await apiCategories.getAllCategories();
+    async listCategories() {
+      const data = await apiCategories.list();
 
       const categoriesData = data.data;
 
       this.categories = categoriesData;
 
-      categoriesData.forEach((categorie) => {
-        const obj = {
-          name: categorie.name,
-          status: false,
-          checked: false,
-        };
-
-        this.categoriesStatus.push(obj);
-      });
+      categories.initialState(this.categories, this.categoriesState);
     },
 
-    checkedCategories() {
-      const checkedCategories = [];
+    async filterCategories() {
+      await this.listProducts();
 
-      this.categoriesStatus.forEach((categorie) => {
-        if (categorie.checked === true) {
-          const name = categorie.name;
+      const checkedCategories = await categories.checkbox(this.categoriesState);
 
-          checkedCategories.push(name);
-        }
-      });
-
-      const newProducts = [];
-
-      this.products.forEach((product) => {
-        if (checkedCategories.includes(product.category)) {
-          newProducts.push(product);
-        }
-      });
-
-      if (newProducts.length === 0) {
-        this.getAllProducts();
-
-        return;
-      }
-
-      this.products = newProducts;
+      this.products = await categories.filter(this.products, checkedCategories);
     },
   },
 
   created() {
-    this.getAllProducts();
-    this.getAllCategories();
+    this.listProducts();
+    this.listCategories();
   },
 
   components: { TheCard },
@@ -83,17 +56,16 @@ export default {
 
 <template>
   <main class="d-flex justify-content-around align-items-start">
-    <!-- categories section -->
     <div
       id="categoriesSection"
       class="d-flex flex-column justify-content-around align-items-center"
     >
-      <a v-on:click="getAllProducts"><h1>ALL PRODUCTS</h1></a>
+      <a v-on:click="listProducts"><h1>ALL PRODUCTS</h1></a>
 
-      <form @submit.prevent="checkedCategories">
+      <form @submit.prevent="filterCategories">
         <legend>Choose one or more categories:</legend>
 
-        <div v-for="(categorie, index) in categoriesStatus" :key="index">
+        <div v-for="(categorie, index) in categoriesState" :key="index">
           <input
             type="checkbox"
             value="{{ categorie.name }}"
