@@ -22,7 +22,6 @@
         <li><router-link to="/allproducts">ECO PRODUCTS</router-link></li>
         <li><router-link to="/recipes">ECO RECIPES</router-link></li>
         <li><router-link to="/reach">REACH US</router-link></li>
-        <li><router-link to="/edit">EDIT</router-link></li>
       </ul>
     </nav>
   </header>
@@ -30,21 +29,20 @@
 
 <style scoped>
 @import "../assets/base.css";
-/*  */
+
+/* header */
 header {
   width: 100%;
   height: 175px;
   background-color: var(--white-palette);
 }
-/*  */
+
+/* title */
 h1 {
   cursor: pointer;
   font-size: 60px;
   letter-spacing: 2px;
   text-shadow: 1px 1px;
-}
-h1:hover {
-  color: black;
 }
 span {
   color: var(--green-palette);
@@ -65,7 +63,8 @@ p {
   font-size: 16px;
   text-shadow: 1px 1px;
 }
-/*  */
+
+/* nav */
 nav {
   width: 100%;
   height: 40px;
@@ -83,19 +82,8 @@ li {
 li:hover {
   color: var(--green-palette);
 }
-/*  */
-.dropdownContent {
-  display: none;
-  transform-origin: top bottom;
-  transition: all 0.5s ease;
-}
-.dropdown:hover .dropdownContent {
-  display: block;
-  position: absolute;
-  width: 100%;
-  background-color: var(--beige-palette);
-  z-index: 9;
-}
+
+/* img animation */
 @keyframes leftToRight {
   100% {
     transform: rotateZ(360deg);

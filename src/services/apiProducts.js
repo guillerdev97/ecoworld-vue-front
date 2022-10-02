@@ -3,8 +3,12 @@ import axios from "axios";
 const baseUrl = "http://localhost:8080/api/v1";
 
 export const apiProducts = {
-  list() {
-    return axios.get(baseUrl + "/products");
+  async list() {
+    const response = await axios.get(baseUrl + "/products");
+
+    const productsData = response.data;
+
+    return productsData;
   },
   getDetail(id) {
     return axios.get(baseUrl + `/product/${id}`);

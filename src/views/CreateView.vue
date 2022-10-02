@@ -22,10 +22,13 @@ export default {
 </script>
 
 <template>
- 
-
+  <main></main>
 </template>
 
 <style scoped>
 @import "../assets/base.css";
+
+main {
+  height: 63vh;
+}
 </style>

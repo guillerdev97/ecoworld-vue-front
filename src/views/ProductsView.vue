@@ -20,36 +20,24 @@ export default {
 
   methods: {
     async listProducts() {
-      const response = await apiProducts.list();
-
-      const productsData = response.data;
-
-      this.products = productsData;
+      this.products = await apiProducts.list();
     },
 
     async listCategories() {
-      const data = await apiCategories.list();
-
-      const categoriesData = data.data;
-
-      this.categories = categoriesData;
+      this.categories = await apiCategories.list();
 
       categories.initialState(this.categories, this.categoriesState);
     },
 
     async filterCategories() {
-      await this.listProducts();
+      this.products = await apiProducts.list();
 
-      const checkedCategories = await categories.checkbox(this.categoriesState);
+      const checkedCategories = categories.checkbox(this.categoriesState);
 
-      this.products = await categories.filter(this.products, checkedCategories);
+      this.products = categories.filter(this.products, checkedCategories);
     },
 
     filterProducts() {
-      if (this.input.length > 0) {
-        this.focus = true;
-      }
-
       return this.products.filter((product) =>
         product.name.toLowerCase().includes(this.input.toLowerCase())
       );
@@ -254,3 +242,20 @@ nav {
   color: var(--green-palette);
 }
 </style>
+
+
+
+
+/*  */
+.dropdownContent {
+  display: none;
+  transform-origin: top bottom;
+  transition: all 0.5s ease;
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+  position: absolute;
+  width: 100%;
+  background-color: var(--beige-palette);
+  z-index: 9;
+}

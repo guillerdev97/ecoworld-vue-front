@@ -1,8 +1,8 @@
 import { apiProducts } from "./apiProducts.js";
 
 export const categories = {
-  async initialState(categoriesData, categoriesState) {
-    const categories = await categoriesData;
+  initialState(categoriesData, categoriesState) {
+    const categories = categoriesData;
 
     categories.forEach((categorie) => {
       const categorieObj = {
@@ -14,10 +14,10 @@ export const categories = {
     });
   },
 
-  async checkbox(categoriesState) {
+  checkbox(categoriesState) {
     const checkedCategories = [];
 
-    await categoriesState.forEach((categorie) => {
+    categoriesState.forEach((categorie) => {
       if (categorie.checked === true) {
         const name = categorie.name;
 
@@ -28,10 +28,10 @@ export const categories = {
     return checkedCategories;
   },
 
-  async filter(productsData, checkedCategories) {
+  filter(productsData, checkedCategories) {
     const newProducts = [];
 
-    await productsData.forEach((product) => {
+    productsData.forEach((product) => {
       if (checkedCategories.includes(product.category)) {
         newProducts.push(product);
       }
