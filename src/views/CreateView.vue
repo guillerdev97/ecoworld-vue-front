@@ -37,14 +37,20 @@ export default {
 </script>
 
 <template>
-  <form @submit.prevent="createProduct">
-    <div id="firstSection" class="border">
-      <div class="mb-3 w-75">
+  <form
+    @submit.prevent="createProduct"
+    class="d-flex justify-content-center align-items-center"
+  >
+    <div
+      id="firstSection"
+      class="d-flex flex-column justify-content-center align-items-center border"
+    >
+      <div class="mb-3">
         <label for="name" class="form-label fs-6 fw-bold">Name</label>
         <input type="text" class="form-control" id="name" v-model="form.name" />
       </div>
 
-      <div class="mb-3 w-75">
+      <div class="mb-3">
         <label for="category" class="form-label fs-6 fw-bold">Category</label>
         <input
           type="text"
@@ -54,8 +60,8 @@ export default {
         />
       </div>
 
-      <div class="mb-3 w-75">
-        <label for="price" class="form-label fs-6 fw-bold">Cost</label>
+      <div class="mb-3">
+        <label for="price" class="form-label f-6 fw-bold">Cost</label>
         <input
           type="text"
           class="form-control"
@@ -64,20 +70,24 @@ export default {
         />
       </div>
 
-      <div class="w-75">
+      <div>
         <label for="description" class="form-label fs-6 fw-bold"
           >Description</label
         ><br />
-        <input
+        <textarea
           id="description"
-          class="form-control"
+          cols="30"
+          rows="2"
           v-model="form.description"
-        />
+        ></textarea>
       </div>
     </div>
 
-    <div id="secondSection" class="border">
-      <div class="mb-3 w-75">
+    <div
+      id="secondSection"
+      class="d-flex flex-column justify-content-center align-items-center border"
+    >
+      <div class="mb-3">
         <label for="image" class="form-label fs-6 fw-bold">Image</label>
         <input type="text" class="form-control" id="image" v-model="form.img" />
       </div>
@@ -94,54 +104,65 @@ export default {
 
 /* form */
 form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 64vh;
 }
 
 /* first section */
 #firstSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
+  width: 35%;
+  height: 50vh;
   padding: 15px;
-  margin-right: 65px;
+  margin-right: 8%;
   color: white;
-  background-color: #b968a5;
+  background-color: #b968a5d3;
 }
 label {
+  padding-left: 3px;
   letter-spacing: 1px;
+  text-shadow: 1px 0 black;
 }
 input {
-  height: 5vh;
+  width: 42vh;
+  height: 4vh;
   padding: 3px 7px;
-  border: 2px solid rgb(137, 58, 211);
+  border: 1px solid rgb(137, 58, 211);
   border-radius: 0;
+  box-shadow: 0 0 0 1px rgb(174, 141, 205);
   font-size: 16px;
-  box-shadow: none;
+}
+input:focus {
+  border: 2px solid rgb(137, 58, 211);
+  outline: 0 none;
+  box-shadow: 0 0 0 2px rgba(227, 227, 227, 0.895) inset;
 }
 #description {
-  height: 11vh;
+  width: 42vh;
+  padding: 3px 7px;
+  border: 1px solid rgb(137, 58, 211);
+  border-radius: 0;
+  box-shadow: 0 0 0 3px rgb(174, 141, 205);
+  font-size: 16px;
+  resize: none;
+}
+#description:focus {
+  outline: 0 none;
+  box-shadow: 0 0 0 2px rgba(227, 227, 227, 0.895) inset;
 }
 
 /* second section */
 #secondSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
+  width: 35%;
+  height: 50vh;
   padding: 15px;
-  margin-left: 60px;
+  margin-left: 8%;
   color: white;
-  background-color: #b968a5;
+  background-color: #b968a5d3;
 }
 img {
-  width: 30vh;
+  width: 35vh;
+  height: 26vh;
+  border: 2px solid white;
 }
 button {
   color: white;
@@ -152,5 +173,6 @@ button:hover {
   color: white;
   background-color: rgb(130, 41, 213);
   box-shadow: 0 2px 5px rgb(130, 41, 213);
+  letter-spacing: 1px;
 }
 </style>
