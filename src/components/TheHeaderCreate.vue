@@ -1,4 +1,12 @@
-<script></script>
+<script>
+export default {
+  name: "TheHeaderCreate",
+
+  data() {
+    return {};
+  },
+};
+</script>
 
 <template>
   <header
@@ -6,9 +14,14 @@
   >
     <div class="d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex justify-content-center align-items-center">
-        <router-link to="/"
-          ><h1><span>ECO</span>WORLD</h1></router-link
-        >
+        <router-link to="/allproducts">
+          <div v-if="this.$route.name === 'edit'">
+            <h1><span>EDIT</span>product</h1>
+          </div>
+          <div v-if="this.$route.name === 'create'">
+            <h1><span>CREATE</span>product</h1>
+          </div>
+        </router-link>
 
         <img
           class="align-self-start"
