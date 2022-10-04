@@ -1,51 +1,39 @@
 <script>
-import EditProduct from "./EditProduct.vue";
-
 export default {
   name: "TheCard",
+
   props: {
     product: {
       type: Object,
       required: true,
     },
-
     src: {
       type: String,
       required: true,
     },
   },
-  methods: {
-    deleteProduct(id) {
-      this.$http
-        .delete("http://localhost:8080/api/v1/product/delete/" + id)
-        .then(alert("Congrats"))
-        .then(location.reload());
-    },
-  },
-
-  components: { EditProduct },
 };
 </script>
 
 <template>
-  <div id="card">
-    <img :src="product.img" alt="" />
-    <div id="body">
-      <h1 class="fs-3 text-white text-center fw-bold pt-2">
-        {{ product.name }}
-      </h1>
-      <p class="text-white text-center fw-bold mt-1">
-        Origin: Asturias<br />
-        Price: {{ product.price }} €/kg
+  <div class="card h-100" style="width: 12rem">
+    <img :src="product.img" class="card-img-top h-50" alt="product image" />
+
+    <div
+      class="card-body h-50 d-flex flex-column justify-content-center align-items-start"
+    >
+      <h5 class="card-title">{{ product.name }}</h5>
+
+      <p class="card-text">
+        {{ product.category }}
       </p>
-      <div
-        class="buttons mt-4 d-flex justify-content-around align-items-center"
-      >
-        <a href="#"><button class="btn btn-success">Contact</button></a>
-        <button v-on:click="deleteProduct(product.id)" class="btn btn-danger">
-          Delete
-        </button>
-        <div><EditProduct :product="product" /></div>
+
+      <p class="card-text">{{ product.price }}€</p>
+
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <button type="button" class="btn">Add to cart</button>
+        <a href="">❌</a>
+        <a href="">📝</a>
       </div>
     </div>
   </div>
@@ -54,37 +42,48 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 
-#card {
-  width: 200px;
-  height: 250px;
-  border: 2px solid var(--brown-palette);
-  border-radius: 5px;
-  transition: all 0.2s ease-in;
+/* card */
+.card {
+  border: 1px solid #c8a65cd1;
 }
-#card:hover {
-  cursor: pointer;
-  border: 2px solid #c8a65cd1;
+.card:hover {
   box-shadow: 0 0 5px #c8a65cd1;
 }
-img {
-  display: block;
-  width: 100%;
-  height: 100px;
-}
-#body {
-  width: 100%;
-  height: 146px;
-  background-color: var(--brown-palette);
-  border-radius: 0 0 3px 3px;
-}
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
+/* card body */
+.card-body {
+  background-color: var(--brown-palette);
+}
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: white;
+  margin-top: -3px;
+}
+.card-text {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: white;
+  margin-left: 6px;
+}
 .btn {
-  font-size: 12px;
-  padding: 3px;
+  margin-top: 3px;
+  padding: 3px 6px;
+  font-size: 14px;
+  background-color: var(--brown-palette);
+  border: 1px solid white;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #c9b278;
+}
+a:hover {
+  cursor: pointer;
+  font-size: 18px;
 }
 </style>

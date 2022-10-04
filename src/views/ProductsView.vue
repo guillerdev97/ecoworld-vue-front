@@ -218,7 +218,7 @@ h2:hover {
 #productsSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 70%;
+  width: 75%;
   margin-bottom: 35px;
 }
 

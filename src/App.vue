@@ -18,13 +18,21 @@ export default {
 </script>
 
 <template>
-  <TheHeader v-if="this.$route.path != '/create'" />
-  <TheHeaderCreate v-if="this.$route.path === '/create'" />
+  <TheHeader
+    v-if="this.$route.path != '/create' && this.$route.path != '/edit'"
+  />
+  <TheHeaderCreate
+    v-if="this.$route.path === '/create' || this.$route.path === '/edit'"
+  />
 
   <RouterView />
 
-  <TheFooter v-if="this.$route.path != '/create'" />
-  <TheFooterCreate v-if="this.$route.path === '/create'" />
+  <TheFooter
+    v-if="this.$route.path != '/create' && this.$route.path != '/edit'"
+  />
+  <TheFooterCreate
+    v-if="this.$route.path === '/create' || this.$route.path === '/edit'"
+  />
 </template>
 
 <style></style>
