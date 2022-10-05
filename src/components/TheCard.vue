@@ -1,6 +1,14 @@
 <script>
+import { apiProducts } from "../services/apiProducts";
+
 export default {
   name: "TheCard",
+
+  data() {
+    return {
+      productId: this.product.id,
+    };
+  },
 
   props: {
     product: {
@@ -12,11 +20,29 @@ export default {
       required: true,
     },
   },
+
+  methods: {
+    async deleteProduct() {
+      const doYouWant = confirm("Do you want to delete this product?");
+
+      if (doYouWant === true) {
+        await apiProducts.delete(this.productId);
+
+        alert(`This product... "${this.product.name}"" has been deleted`);
+
+        location.reload();
+
+        return;
+      }
+
+      return;
+    },
+  },
 };
 </script>
 
 <template>
-  <div class="card h-100" style="width: 12rem">
+  <div class="card">
     <img :src="product.img" class="card-img-top h-50" alt="product image" />
 
     <div
@@ -32,8 +58,16 @@ export default {
 
       <div class="d-flex justify-content-between align-items-center w-100">
         <button type="button" class="btn">Add to cart</button>
-        <a href="">❌</a>
-        <a href="">📝</a>
+        <a v-on:click="deleteProduct">❌</a>
+        <router-link
+          :to="{
+            path: `/edit/${this.productObj}`,
+            params: {
+              productObj: this.product,
+            },
+          }"
+          ><a>📝</a></router-link
+        >
       </div>
     </div>
   </div>
@@ -44,6 +78,8 @@ export default {
 
 /* card */
 .card {
+  width: 15vw;
+  height: 42vh;
   border: 1px solid #c8a65cd1;
 }
 .card:hover {

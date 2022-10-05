@@ -1,31 +1,38 @@
 <script>
-import { RouterLink } from "vue-router";
 import { apiProducts } from "../services/apiProducts.js";
 
 export default {
-  name: "CreateView",
+  name: "EditView",
 
   data() {
     return {
       form: {
-        name: "",
-        category: "",
-        price: "",
-        description: "",
-        cost: "",
-        img: "",
+        name: this.product.name,
+        category: this.product.category,
+        price: this.product.price,
+        description: this.product.description,
+        img: this.product.img,
       },
     };
   },
 
+  props: {
+    product: {
+      type: Object,
+      required: true,
+    },
+  },
+
   methods: {
-    async createProduct() {
-      const verify = confirm("Are you sure you want to create this product?");
+    async editProduct() {
+      const doYouWant = confirm("Are you sure you want to edit this product?");
 
-      if (verify === true) {
-        const response = await apiProducts.create(this.form);
+      if (doYouWant === true) {
+        await apiProducts.update(this.form);
 
-        this.$router.push("/confirmcreate");
+        alert(`This product... "${this.product.name}"" has been updated`);
+
+        this.$router.push("/allproducts");
 
         return;
       }
@@ -33,12 +40,16 @@ export default {
       return;
     },
   },
+
+  created() {
+    console.log(this.product);
+  },
 };
 </script>
 
 <template>
   <form
-    @submit.prevent="createProduct"
+    @submit.prevent="editProduct"
     class="d-flex justify-content-center align-items-center"
   >
     <div
@@ -94,7 +105,7 @@ export default {
 
       <img src="../assets/img/apple.jpeg" alt="apple image" class="mb-3" />
 
-      <button type="submit" class="btn">Create</button>
+      <button type="submit" class="btn">Edit</button>
     </div>
   </form>
 </template>

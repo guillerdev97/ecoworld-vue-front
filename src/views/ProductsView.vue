@@ -13,7 +13,7 @@ export default {
       products: [],
       categories: [],
       categoriesState: [],
-      NUM_RESULTS: 4,
+      NUM_RESULTS: 6,
       pag: 1,
     };
   },
@@ -54,7 +54,8 @@ export default {
 </script>
 
 <template>
-  <section id="search" class="mt-5 text-center">
+  <!-- search section -->
+  <section id="searchSection" class="mt-4 mb-2 text-center">
     <input
       type="text"
       v-on:focus="filterProducts"
@@ -62,7 +63,7 @@ export default {
       placeholder="Search products..."
     />
 
-    <div class="results">
+    <div>
       <div v-for="(product, index) in filterProducts()" :key="index">
         <router-link :to="{ path: '/detail' }">
           <p v-if="this.input.length > 0">
@@ -70,21 +71,24 @@ export default {
           </p>
         </router-link>
       </div>
+
       <div v-if="input && !filterProducts().length">
         <p>No results found!</p>
       </div>
     </div>
   </section>
 
-  <main class="d-flex justify-content-around align-items-start">
+  <!-- main section -->
+  <main>
+    <!-- categories section -->
     <div
       id="categoriesSection"
-      class="d-flex flex-column justify-content-around align-items-center"
+      class="d-flex flex-column justify-content-around align-items-center mt-3"
     >
-      <a v-on:click="listProducts"><h1>ALL PRODUCTS</h1></a>
+      <a v-on:click="listProducts"><h1 class="fs-4">ALL PRODUCTS</h1></a>
 
       <form @submit.prevent="filterCategories">
-        <legend>Choose one or more categories:</legend>
+        <legend class="fs-6">Choose one or more categories:</legend>
 
         <div v-for="(categorie, index) in categoriesState" :key="index">
           <input
@@ -93,27 +97,29 @@ export default {
             v-model="categorie.checked"
             v-bind:index="categorie.index"
           />
-          <label>{{ categorie.name }}</label>
+          <label class="fs-6">{{ categorie.name }}</label>
           <br />
         </div>
 
-        <div class="text-center">
+        <div class="text-center mt-2">
           <button type="submit">Filtrar</button>
         </div>
       </form>
 
-      <router-link to="/create"><h2>*Add new product</h2></router-link>
+      <router-link to="/create"
+        ><h2 class="fs-6 mt-4">ADD NEW PRODUCT</h2></router-link
+      >
     </div>
     <!--  -->
 
     <!-- Results -->
     <section
       id="totalPagination"
-      class="d-flex flex-column justify-content-around align-items-center"
+      class="d-flex flex-column justify-content-around align-items-center border"
     >
       <div id="productsSection">
         <div
-          class="m-auto mt-3 ml-3 mr-3 mb-3"
+          class="m-auto mt-3 ml-3 mr-3 mb-4"
           v-for="(product, index) in products"
           :key="index"
           v-show="(pag - 1) * NUM_RESULTS <= index && pag * NUM_RESULTS > index"
@@ -156,70 +162,97 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 
-#search {
+/* search section done */
+#searchSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
+  width: 10vw;
   margin: auto;
   align-items: center;
+  background-color: var(--beige-palette);
+}
+#searchSection input {
+  width: 18vw;
+  height: 4vh;
+  padding: 1vw 1vh;
+  outline: none;
+}
+#searchSection p {
+  border-bottom: 0.1vw solid rgb(106, 82, 41);
+  color: rgb(106, 82, 41);
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
+/* main done */
 main {
-  padding-left: 120px;
-  padding-top: 50px;
-}
-/* categories section */
-#categoriesSection {
-  width: 20%;
-  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  width: 100vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
+/* categories section done */
+#categoriesSection {
+  width: 20vw;
+  border: 0.1vw solid black;
+}
 h1 {
   cursor: pointer;
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 2vh;
+}
+h1:hover {
+  color: var(--green-palette);
+  text-decoration: underline;
 }
 form legend {
-  margin-bottom: 8px;
-  font-size: 15px;
+  margin-bottom: 1vh;
 }
 form label {
-  cursor: pointer;
-  margin-left: 6px;
-  font-size: 16px;
+  margin-left: 0.5vw;
 }
 form input {
   cursor: pointer;
 }
+form input:checked {
+  background-color: var(--green-palette);
+}
 form button {
-  margin-top: 13px;
-  padding: 2px 5px;
+  padding: 0.3vh 0.6vw;
   color: white;
   background-color: var(--green-palette);
+  transition: all 0.2s ease-in;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.2vw;
+  transition: all 0.2s ease-in;
 }
-
-h2 {
+form button:hover {
+  color: white;
+  background-color: var(--green-palette);
+  box-shadow: 0 0.2vw 0.4vw var(--green-palette);
+  letter-spacing: 0.1vw;
+}
+form h2 {
   cursor: pointer;
-  margin-top: 15px;
-  font-size: 16px;
   text-align: left;
 }
 h2:hover {
-  color: black;
+  color: var(--green-palette);
   text-decoration: underline;
 }
-/*  */
+
+/* pagination section */
 #totalPagination {
-  width: 80%;
+  width: 57vw;
 }
 #productsSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 75%;
-  margin-bottom: 35px;
+  width: 55vw;
+  margin-bottom: 1vh;
 }
 
 nav {

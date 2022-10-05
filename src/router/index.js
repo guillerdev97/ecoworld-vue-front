@@ -7,7 +7,7 @@ import RecipesView from "../views/RecipesView.vue";
 import ReachView from "../views/ReachView.vue";
 import DetailView from "../views/DetailView.vue";
 import ConfirmCreateView from "../views/ConfirmCreateView.vue";
-import EditView from "../views/CreateView.vue";
+import EditView from "../views/EditView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,8 +43,9 @@ const router = createRouter({
       component: ReachView,
     },
     {
-      path: "/edit",
+      path: "/edit/:product",
       name: "edit",
+      props: true,
       component: EditView,
     },
     {
