@@ -60,7 +60,7 @@ export default {
       type="text"
       v-on:focus="filterProducts"
       v-model="input"
-      placeholder="Search products..."
+      placeholder="🔍"
     />
 
     <div>
@@ -87,8 +87,8 @@ export default {
     >
       <a v-on:click="listProducts"><h1 class="fs-4">ALL PRODUCTS</h1></a>
 
-      <form @submit.prevent="filterCategories">
-        <legend class="fs-6">Choose one or more categories:</legend>
+      <form id="form" @submit.prevent="filterCategories">
+        <legend>Choose one or more categories:</legend>
 
         <div v-for="(categorie, index) in categoriesState" :key="index">
           <input
@@ -102,7 +102,7 @@ export default {
         </div>
 
         <div class="text-center mt-2">
-          <button type="submit">Filtrar</button>
+          <input id="submit" type="submit" value="Filter" />
         </div>
       </form>
 
@@ -110,13 +110,13 @@ export default {
         ><h2 class="fs-6 mt-4">ADD NEW PRODUCT</h2></router-link
       >
     </div>
-    <!--  -->
 
-    <!-- Results -->
+    <!-- pagination section -->
     <section
       id="totalPagination"
       class="d-flex flex-column justify-content-around align-items-center border"
     >
+      <!-- products section -->
       <div id="productsSection">
         <div
           class="m-auto mt-3 ml-3 mr-3 mb-4"
@@ -128,29 +128,26 @@ export default {
         </div>
       </div>
 
-      <!-- Controls -->
       <nav aria-label="Page navigation" class="text-center">
-        <ul class="pagination text-center">
+        <ul class="text-center">
           <li>
             <a
-              class="controls"
               href="#"
               aria-label="Previous"
               v-show="pag != 1"
               @click.prevent="pag -= 1"
             >
-              <span aria-hidden="true">Back</span>
+              <span class="fs-5" aria-hidden="true">Back</span>
             </a>
           </li>
           <li>
             <a
-              class="controls"
               href="#"
               aria-label="Next"
               v-show="(pag * NUM_RESULTS) / products.length < 1"
               @click.prevent="pag += 1"
             >
-              <span aria-hidden="true">Next</span>
+              <span class="fs-5" aria-hidden="true">Next</span>
             </a>
           </li>
         </ul>
@@ -197,7 +194,7 @@ main {
 
 /* categories section done */
 #categoriesSection {
-  width: 20vw;
+  width: 25vw;
   border: 0.1vw solid black;
 }
 h1 {
@@ -209,6 +206,7 @@ h1:hover {
   text-decoration: underline;
 }
 form legend {
+  font-size: 1.5vw;
   margin-bottom: 1vh;
 }
 form label {
@@ -220,7 +218,7 @@ form input {
 form input:checked {
   background-color: var(--green-palette);
 }
-form button {
+form #submit {
   padding: 0.3vh 0.6vw;
   color: white;
   background-color: var(--green-palette);
@@ -229,7 +227,7 @@ form button {
   border-radius: 0.2vw;
   transition: all 0.2s ease-in;
 }
-form button:hover {
+form #submit:hover {
   color: white;
   background-color: var(--green-palette);
   box-shadow: 0 0.2vw 0.4vw var(--green-palette);
@@ -248,28 +246,61 @@ h2:hover {
 #totalPagination {
   width: 57vw;
 }
+
+/* products section */
 #productsSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 55vw;
   margin-bottom: 1vh;
 }
-
 nav {
-  width: 60%;
-  margin-bottom: 25px;
+  width: 20vw;
+  margin-bottom: 4vh;
 }
-.pagination {
+nav ul {
+  list-style-type: none;
   display: flex;
   justify-content: center;
 }
-.controls {
-  width: 30%;
-  margin-right: 10px;
-  margin-left: 10px;
-  font-size: 20px;
+nav a {
+  margin: 1vw;
+  letter-spacing: 0.1vw;
 }
-.controls:hover {
+nav a:hover {
   color: var(--green-palette);
+}
+
+/* media queries */
+@media (max-width: 1200px) {
+  #totalPagination {
+    width: 62vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  #totalPagination {
+    width: 70vw;
+  }
+  #categoriesSection {
+    width: 20vw;
+  }
+  #productsSection {
+    width: 62vw;
+  }
+  form legend {
+    font-size: 1.3vw;
+  }
+  form label {
+    font-size: 1.4vw !important;
+  }
+}
+@media (max-width: 850px) {
+  h1 {
+    font-size: 2.5vw !important;
+  }
+  h2 {
+    font-size: 1.8vw !important;
+  }
 }
 </style>

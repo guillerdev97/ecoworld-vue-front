@@ -1,6 +1,7 @@
 <script>
 import TheCarousel from "../components/TheCarousel.vue";
 import TheCardRelease from "../components/TheCardRelease.vue";
+
 export default {
   name: "HomeView",
   components: { TheCarousel, TheCardRelease },
