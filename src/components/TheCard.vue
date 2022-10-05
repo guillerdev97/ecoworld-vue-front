@@ -1,5 +1,6 @@
 <script>
 import { apiProducts } from "../services/apiProducts";
+import EditModal from "../views/EditModal.vue";
 
 export default {
   name: "TheCard",
@@ -37,7 +38,20 @@ export default {
 
       return;
     },
+
+    editProduct() {
+      const productId = this.product.id;
+
+      this.$router.push({
+        name: "edit",
+        params: {
+          id: productId,
+        },
+      });
+    },
   },
+
+  components: { EditModal },
 };
 </script>
 
@@ -61,15 +75,7 @@ export default {
       <div class="d-flex justify-content-between align-items-center w-100 mt-2">
         <button type="button" class="btn">Add to cart</button>
         <a v-on:click="deleteProduct">❌</a>
-        <router-link
-          :to="{
-            path: `/edit/${this.productObj}`,
-            params: {
-              productObj: this.product,
-            },
-          }"
-          ><a>📝</a></router-link
-        >
+        <a><EditModal :product="product" /></a>
       </div>
     </div>
   </div>
@@ -139,6 +145,17 @@ a:hover {
 @media (max-width: 850px) {
   .card {
     height: 27vh;
+  }
+}
+@media (max-width: 650px) {
+  .card {
+    height: 20vh;
+  }
+}
+@media (max-width: 550px) {
+  .card {
+    width: 30vw;
+    height: 23vh;
   }
 }
 </style>

@@ -303,4 +303,39 @@ nav a:hover {
     font-size: 1.8vw !important;
   }
 }
+@media (max-width: 650px) {
+  #categoriesSection {
+    width: 23vw;
+  }
+  #totalPagination {
+    width: 60vw;
+  }
+  #productsSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  #categoriesSection {
+    width: 27vw;
+  }
+  #totalPagination {
+    width: 50vw;
+  }
+  #productsSection {
+    width: 75vw;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  h1 {
+    font-size: 2.9vw !important;
+  }
+  h2 {
+    font-size: 2.2vw !important;
+  }
+  form legend {
+    font-size: 2vw;
+  }
+  form label {
+    font-size: 2.1vw !important;
+  }
+}
 </style>

@@ -20,6 +20,6 @@ export const apiProducts = {
     return axios.post(baseUrl + "/products/create", formData);
   },
   update(formData) {
-    return axios.put(baseUrl + "/products/edit", formData);
+    return axios.put(baseUrl + "/products/edit/", formData);
   },
 };
