@@ -124,7 +124,7 @@ export default {
 }
 #weareSection img {
   width: 15%;
-  margin-right: 200px;
+  margin-right: 20vw;
 }
 #weareSection h1 {
   color: var(--white-palette);
@@ -178,6 +178,19 @@ img {
 
 /* media queries 1000 800 650 500px */
 @media (max-width: 1000px) {
+  #weareSection {
+    height: 40vh;
+  }
+  #weareSection img {
+    width: 15%;
+    margin-right: 20vw;
+  }
+  #weareSection h1 {
+    font-size: 3vw;
+  }
+  #modalButton {
+    font-size: 1.5vw;
+  }
   p {
     font-size: 1.4vw !important;
   }
@@ -187,6 +200,19 @@ img {
   }
 }
 @media (max-width: 800px) {
+  #weareSection {
+    height: 35vh;
+  }
+  #weareSection img {
+    width: 18%;
+    margin-right: 20vw;
+  }
+  #weareSection h1 {
+    font-size: 3.5vw;
+  }
+  #modalButton {
+    font-size: 1.7vw;
+  }
   p {
     font-size: 1.6vw !important;
   }
@@ -196,6 +222,19 @@ img {
   }
 }
 @media (max-width: 650px) {
+  #weareSection {
+    height: 35vh;
+  }
+  #weareSection img {
+    width: 20%;
+    margin-right: 20vw;
+  }
+  #weareSection h1 {
+    font-size: 3.5vw;
+  }
+  #modalButton {
+    font-size: 1.7vw;
+  }
   p {
     font-size: 1.8vw !important;
   }
@@ -209,6 +248,19 @@ img {
   }
 }
 @media (max-width: 500px) {
+  #weareSection {
+    height: 30vh;
+  }
+  #weareSection img {
+    width: 23%;
+    margin-right: 20vw;
+  }
+  #weareSection h1 {
+    font-size: 4vw;
+  }
+  #modalButton {
+    font-size: 2.2vw;
+  }
   #corporation {
     height: 30vh;
   }
