@@ -38,7 +38,7 @@ Backend:
     The API must allow performing a CRUD.
 
 
-Extras requirements:
+Extra requirements:
 
    Implement the possibility of performing a search for a specific piece of data with a search engine.
 
