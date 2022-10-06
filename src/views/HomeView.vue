@@ -4,6 +4,7 @@ import TheCardRelease from "../components/TheCardRelease.vue";
 
 export default {
   name: "HomeView",
+
   components: { TheCarousel, TheCardRelease },
 };
 </script>
@@ -50,36 +51,38 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 
+/* corporation section */
 #corporation {
-  width: 100%;
-  height: 350px;
-  padding: 20px 40px;
+  width: 100vw;
+  height: 55vh;
+  padding: 2vh 3vw;
 }
-
+h1 {
+  font-size: 2.6vw;
+}
 #text {
-  width: 40%;
-  margin-left: 15px;
+  width: 40vw;
+  margin-left: 0.2vw;
+  border: 1px solid black;
 }
 #green {
   color: var(--green-palette);
 }
 #textBorder {
   color: var(--white-palette);
-  text-shadow: 3px 3px black;
+  text-shadow: 0.2vw 0.2vw black;
 }
 p {
-  margin-top: 10px;
-  margin-left: 5px;
-}
-
-#img {
-  width: 40%;
+  font-size: 1.3vw;
+  margin-top: 1.2vh;
+  margin-left: 0.3vw;
 }
 img {
-  width: 70%;
-  height: 280px;
+  width: 23vw;
+  height: 37vh;
   border-radius: 5px;
 }
+
 /*  */
 #release {
   width: 100%;
@@ -94,5 +97,84 @@ img {
 }
 #release .brown {
   margin-left: -13px;
+}
+
+@media (max-width: 1000px) {
+  #text {
+    width: 50vw;
+  }
+  h1 {
+    font-size: 3vw;
+  }
+  p {
+    font-size: 1.8vw;
+  }
+  img {
+    width: 27vw;
+    height: 35vh;
+  }
+}
+@media (max-width: 800px) {
+  #corporation {
+    height: 48vh;
+  }
+  #text {
+    width: 54vw;
+  }
+  h1 {
+    font-size: 3.2vw;
+  }
+  p {
+    font-size: 1.9vw;
+  }
+  img {
+    width: 27vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 650px) {
+  #corporation {
+    height: 45vh;
+  }
+  #text {
+    width: 45vw;
+    margin-left: 1.2vw;
+  }
+  h1 {
+    font-size: 5.2vw;
+  }
+  p {
+    display: none;
+  }
+  img {
+    width: 27vw;
+    height: 25vh;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 500px) {
+  #corporation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
+  #text {
+    width: 48vw;
+  }
+  h1 {
+    text-align: center;
+    font-size: 5.5vw;
+  }
+  p {
+    display: none;
+  }
+  img {
+    width: 32vw;
+    height: 21vh;
+    border-radius: 5px;
+  }
 }
 </style>
