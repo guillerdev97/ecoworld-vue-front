@@ -46,6 +46,8 @@ h1 {
 span {
   color: var(--green-palette);
 }
+
+/* image */
 img {
   cursor: pointer;
   width: 4.5vw;
@@ -56,6 +58,8 @@ img {
 img:hover {
   animation: leftToRight 0.5s ease-in;
 }
+
+/* small text */
 p {
   margin-top: -1.7vh;
   margin-right: 4.3vw;
@@ -68,7 +72,6 @@ nav {
   width: 100vw;
   height: 6vh;
   margin-top: 2vh;
-  border: 1px solid black;
 }
 ul {
   width: 55vw;
@@ -91,6 +94,7 @@ li:hover {
   }
 }
 
+/* media queries 1000 800 650 500px */
 @media (max-width: 1000px) {
   header {
     height: 21vh;

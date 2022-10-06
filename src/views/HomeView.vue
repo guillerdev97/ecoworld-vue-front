@@ -42,16 +42,14 @@ export default {
       <TheCardRelease />
     </div>
 
-    <h1 class="fs-1">
-      NEW RELEASE<br /><br /><span class="brown">OF THE MONTH</span>
-    </h1>
+    <h1>NEW RELEASE<br /><br /><span class="brown">OF THE MONTH</span></h1>
   </section>
 </template>
 
 <style scoped>
 @import "../assets/base.css";
 
-/* corporation section */
+/* corporation */
 #corporation {
   width: 100vw;
   height: 55vh;
@@ -63,7 +61,6 @@ h1 {
 #text {
   width: 40vw;
   margin-left: 0.2vw;
-  border: 1px solid black;
 }
 #green {
   color: var(--green-palette);
@@ -83,22 +80,24 @@ img {
   border-radius: 5px;
 }
 
-/*  */
+/* product release */
 #release {
-  width: 100%;
-  height: 400px;
+  width: 100vw;
+  height: 58vh;
   background-color: var(--beige-palette);
 }
 #release #card {
-  width: 45%;
+  width: 40%;
 }
 #release h1 {
+  font-size: 3vw;
   color: rgb(145, 104, 51);
 }
 #release .brown {
-  margin-left: -13px;
+  margin-left: -0.9vw;
 }
 
+/* media queries 1000 800 650 500px */
 @media (max-width: 1000px) {
   #text {
     width: 50vw;
