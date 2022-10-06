@@ -37,7 +37,7 @@ export default {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">REACH US</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -45,7 +45,14 @@ export default {
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">We connect people</div>
+            <div class="modal-body">
+              For more information send us an email and we will call you!
+              <a
+                style="text-decoration: underline"
+                href="https://www.google.com/intl/es/gmail/about/"
+                >click here</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -112,7 +119,7 @@ export default {
 
 #weareSection {
   width: 100%;
-  height: 350px;
+  height: 50vh;
   background-color: #a36529;
 }
 #weareSection img {
@@ -121,7 +128,7 @@ export default {
 }
 #weareSection h1 {
   color: var(--white-palette);
-  font-size: 40px;
+  font-size: 3vw;
 }
 #weareSection span {
   margin-left: 3px;
@@ -142,7 +149,7 @@ export default {
 
 #corporation {
   width: 100%;
-  height: 350px;
+  height: 50vh;
   padding: 20px 40px;
 }
 
@@ -155,6 +162,7 @@ export default {
 }
 
 p {
+  font-size: 1.1vw !important;
   margin-top: 10px;
   margin-left: 5px;
 }
@@ -163,8 +171,57 @@ p {
   width: 40%;
 }
 img {
-  width: 70%;
-  height: 280px;
+  width: 25vw;
+  height: 35vh;
   border-radius: 5px;
+}
+
+/* media queries 1000 800 650 500px */
+@media (max-width: 1000px) {
+  p {
+    font-size: 1.4vw !important;
+  }
+  img {
+    width: 25vw;
+    height: 30vh;
+  }
+}
+@media (max-width: 800px) {
+  p {
+    font-size: 1.6vw !important;
+  }
+  img {
+    width: 25vw;
+    height: 25vh;
+  }
+}
+@media (max-width: 650px) {
+  p {
+    font-size: 1.8vw !important;
+  }
+  img {
+    width: 27vw;
+    height: 22vh;
+  }
+  #text {
+    width: 50%;
+    margin-left: 15px;
+  }
+}
+@media (max-width: 500px) {
+  #corporation {
+    height: 30vh;
+  }
+  p {
+    display: none;
+  }
+  img {
+    width: 30vw;
+    height: 18vh;
+  }
+  #text {
+    width: 50%;
+    margin-left: 15px;
+  }
 }
 </style>
