@@ -103,7 +103,7 @@ Develop branch
 
 | Front End | Back End | Diseño y organización | 
 | :---: | :---: | :---: |
-| <img src="https://github.com/Yelose/Yelose/blob/main/img/vscode.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/html.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/bootstrap.png">  <img src="https://github.com/Yelose/Yelose/blob/main/img/css.png"> | <img src="https://github.com/Yelose/Yelose/blob/main/img/mysql.png"> <img src="[https://github.com/Yelose/Yelose/blob/main/img/mysql.png](https://sites.google.com/site/javazed2498/_/rsrc/1472762509258/home/Java.png)"> | <img src="https://github.com/Yelose/Yelose/blob/main/img/figma.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/jira.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/google.png">  |
+| <img src="https://github.com/Yelose/Yelose/blob/main/img/vscode.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/html.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/bootstrap.png">  <img src="https://github.com/Yelose/Yelose/blob/main/img/css.png"> | <img src="https://github.com/Yelose/Yelose/blob/main/img/mysql.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/mysql.png"> | <img src="https://github.com/Yelose/Yelose/blob/main/img/figma.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/jira.png"> <img src="https://github.com/Yelose/Yelose/blob/main/img/google.png">  |
 
 
 ## Documentation
@@ -112,7 +112,7 @@ Develop branch
 - [User Stories](https://docs.google.com/document/d/1bu1sXLucbUUZImvh2dEEr0OyieFw_CcoXwYy5K9okBg/edit?usp=sharing)
 - [Prototype](https://www.figma.com/file/SsQaavzZ0BiLUkSxbW59qx/Eco-World?node-id=0%3A1)
 - [UserFlow Figma](https://www.figma.com/file/SsQaavzZ0BiLUkSxbW59qx/Eco-World?node-id=16%3A4)
-<img src="src/assets/img/userflow-eco-world.jpg" style="margin-left: 30px; width: 60%; text-align: center;">
+<img src="src/assets/img/userflow-eco-world.jpg" style="margin-left: 30px; width: 80%; margin: auto;">
 
 
 ## Authors
