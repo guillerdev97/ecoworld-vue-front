@@ -19,7 +19,11 @@ export default {
 
 <template>
   <TheHeader
-    v-if="this.$route.path != '/create' && this.$route.path != '/edit'"
+    v-if="
+      this.$route.path != '/create' &&
+      this.$route.path != '/edit' &&
+      this.$route.path != '/'
+    "
   />
   <TheHeaderCreate
     v-if="this.$route.path === '/create' || this.$route.path === '/edit'"
@@ -28,7 +32,11 @@ export default {
   <RouterView />
 
   <TheFooter
-    v-if="this.$route.path != '/create' && this.$route.path != '/edit'"
+    v-if="
+      this.$route.path != '/create' &&
+      this.$route.path != '/edit' &&
+      this.$route.path != '/'
+    "
   />
   <TheFooterCreate
     v-if="this.$route.path === '/create' || this.$route.path === '/edit'"

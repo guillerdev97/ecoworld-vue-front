@@ -1,6 +1,7 @@
 <script>
 import { apiProducts } from "../services/apiProducts";
-import EditModal from "../views/EditModal.vue";
+import EditModal from "../components/modals/EditModal.vue";
+import { storage } from "../services/storage.js";
 
 export default {
   name: "TheCard",
@@ -49,6 +50,18 @@ export default {
         },
       });
     },
+
+    addToStorage() {
+      const doYouWant = confirm("Do you want to add this product to cart?");
+
+      if (doYouWant === true) {
+        const product = this.product;
+
+        storage.getItem(product);
+
+        return;
+      }
+    },
   },
 
   components: { EditModal },
@@ -73,7 +86,9 @@ export default {
       <p class="card-text">{{ product.price }}€</p>
 
       <div class="d-flex justify-content-between align-items-center w-100 mt-2">
-        <button type="button" class="btn">Add to cart</button>
+        <button v-on:click="addToStorage" type="button" class="btn">
+          Add to cart
+        </button>
         <a v-on:click="deleteProduct">❌</a>
         <a><EditModal :product="product" /></a>
       </div>

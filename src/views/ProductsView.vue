@@ -3,6 +3,7 @@ import { apiProducts } from "../services/apiProducts.js";
 import { apiCategories } from "../services/apiCategories.js";
 import { categories } from "../services/categoriesFunctions.js";
 import TheCard from "../components/TheCard.vue";
+import CreateModal from "../components/modals/CreateModal.vue";
 
 export default {
   name: "ProductsView",
@@ -49,7 +50,7 @@ export default {
     this.listCategories();
   },
 
-  components: { TheCard },
+  components: { TheCard, CreateModal },
 };
 </script>
 
@@ -106,9 +107,7 @@ export default {
         </div>
       </form>
 
-      <router-link to="/create"
-        ><h2 class="fs-6 mt-4">ADD NEW PRODUCT</h2></router-link
-      >
+      <CreateModal />
     </div>
 
     <!-- pagination section -->

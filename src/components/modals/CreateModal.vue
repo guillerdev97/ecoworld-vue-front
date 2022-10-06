@@ -1,37 +1,44 @@
 <script>
-import { apiProducts } from "../services/apiProducts.js";
+import { apiProducts } from "../../services/apiProducts.js";
 
 export default {
-  name: "EditView",
+  name: "CreateModal",
 
   data() {
     return {
-      productId: this.product.id,
-      form: {
-        id: this.product.id,
-        name: this.product.name,
-        category: this.product.category,
-        price: this.product.price,
-        description: this.product.description,
-      },
       showModal: false,
+      form: {
+        name: "",
+        category: "",
+        price: "",
+        description: "",
+      },
     };
   },
 
-  props: {
-    product: {
-      type: Object,
-      required: true,
-    },
-  },
-
   methods: {
-    async editProduct() {
-      await apiProducts.update(this.form);
+    async createProduct() {
+      const verify = confirm("Are you sure you want to create this product?");
 
-      alert(`${this.product.name} has been updated`);
+      if (verify === true) {
+        if (
+          this.form.category === "Snacks and nuts" ||
+          this.form.category === "Fruits and vegetables" ||
+          this.form.category === "Meat and fish" ||
+          this.form.category === "Cereals and seeds"
+        ) {
+          await apiProducts.create(this.form);
 
-      location.reload();
+          alert(`${this.form.name} has been created`);
+
+          location.reload();
+        }
+        alert("You have to choose a correct category name");
+
+        return;
+      }
+
+      return;
     },
   },
 };
@@ -86,17 +93,24 @@ export default {
       <input type="text" placeholder="" id="img" required v-model="form.img" />
     </div>
     <div class="modal-buttons">
-      <button class="accept-button" v-on:click="editProduct">Aceptar</button>
+      <button
+        type="submit"
+        v-on:click="createProduct"
+        class="accept-button fs-6 mt-4"
+        @click="showModal = false"
+      >
+        ADD NEW PRODUCT
+      </button>
       <button class="cancel-button" @click="showModal = false">Cancelar</button>
     </div>
   </div>
 
-  <button id="editProduct" @click="showModal = true">📝</button>
+  <button @click="showModal = true">ADD NEW PRODUCT</button>
 </template>
 
 <style scoped>
-  @import "../assets/base.css";
-  
+@import "../../assets/base.css";
+
 .modal-overlay {
   display: flex;
   flex-direction: column;
@@ -118,9 +132,6 @@ export default {
   display: flex;
   flex-direction: column;
 }
-/* #editProduct {
-  
-} */
 
 .cancel-button {
   background-color: rgb(242, 25, 25);

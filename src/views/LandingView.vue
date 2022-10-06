@@ -1,9 +1,24 @@
-<script></script>
+<script>
+export default {
+  name: "LandingVIew",
+  methods: {
+    load() {
+      setTimeout(this.toLocation, 2000);
+    },
+    toLocation() {
+      this.$router.push("/home");
+    },
+  },
+  created() {
+    this.load();
+  },
+};
+</script>
 
 <template>
   <main class="d-flex justify-content-center align-items-center">
     <div class="d-flex justify-content-center align-items-center">
-      <span>ECO</span>
+      <span>ECO WORLD</span>
     </div>
   </main>
 </template>
@@ -13,7 +28,8 @@
 
 main {
   width: 100vw;
-  max-height: 100vh;
+  min-height: 100vh;
+  background-color: rgb(242, 240, 234);
 }
 div {
   width: 20%;
@@ -21,11 +37,11 @@ div {
   border: 2vw solid rgb(213, 165, 55);
   border-radius: 100%;
   animation-name: move;
-  animation-duration: 1.7s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 span {
-  font-size: 60px;
+  font-size: 35px;
   font-weight: bold;
   color: var(--green-palette);
 }

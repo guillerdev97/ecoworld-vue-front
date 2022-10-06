@@ -2,11 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ProductsView from "../views/ProductsView.vue";
-import CreateView from "../views/CreateView.vue";
-import ReachView from "../views/CartView.vue";
 import DetailView from "../views/DetailView.vue";
-import ConfirmCreateView from "../views/ConfirmCreateView.vue";
 import LandingView from "../views/LandingView.vue";
+import CartView from "../views/CartView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,24 +30,14 @@ const router = createRouter({
       component: ProductsView,
     },
     {
-      path: "/create",
-      name: "create",
-      component: CreateView,
-    },
-    {
-      path: "/reach",
-      name: "reach",
-      component: ReachView,
-    },
-    {
       path: "/detail",
       name: "detail",
       component: DetailView,
     },
     {
-      path: "/confirmcreate",
-      name: "confirmcreate",
-      component: ConfirmCreateView,
+      path: "/cart",
+      name: "cart",
+      component: CartView,
     },
   ],
 });
