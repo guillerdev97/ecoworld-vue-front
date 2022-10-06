@@ -143,4 +143,16 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+
+button {
+  margin-top: 10px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+button:hover {
+  color: var(--green-palette);
+  text-decoration: underline;
+}
 </style>

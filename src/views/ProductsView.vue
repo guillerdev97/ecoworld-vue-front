@@ -113,7 +113,7 @@ export default {
     <!-- pagination section -->
     <section
       id="totalPagination"
-      class="d-flex flex-column justify-content-around align-items-center border"
+      class="d-flex flex-column justify-content-around align-items-center"
     >
       <!-- products section -->
       <div id="productsSection">
@@ -194,7 +194,6 @@ main {
 /* categories section done */
 #categoriesSection {
   width: 25vw;
-  border: 0.1vw solid black;
 }
 h1 {
   cursor: pointer;
