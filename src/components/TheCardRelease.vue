@@ -71,4 +71,58 @@ a:hover {
   cursor: pointer;
   font-size: 1.2vw;
 }
+
+/* media queries 1000 800 650 500px */
+@media (max-width: 1000px) {
+  .card {
+    width: 18vw;
+    height: 34vh;
+  }
+}
+@media (max-width: 800px) {
+  .card {
+    width: 20vw;
+    height: 30vh;
+  }
+  .card-title {
+    font-size: 2.3vw !important;
+  }
+  .card-text {
+    font-size: 1.3vw;
+  }
+  .btn {
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    width: 23vw;
+    height: 27vh;
+  }
+  .card-title {
+    font-size: 2.5vw !important;
+  }
+  .card-text {
+    font-size: 1.5vw;
+  }
+  .btn {
+    font-size: 1.5vw;
+  }
+}
+@media (max-width: 650px) {
+  .card {
+    width: 31vw;
+    height: 23vh;
+  }
+  .card-title {
+    font-size: 3vw !important;
+  }
+  .card-text {
+    font-size: 2vw;
+  }
+  .btn {
+    font-size: 2vw;
+  }
+}
 </style>

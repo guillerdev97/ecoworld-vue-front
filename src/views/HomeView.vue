@@ -112,6 +112,13 @@ img {
     width: 27vw;
     height: 35vh;
   }
+
+  #release {
+    height: 58vh;
+  }
+  #release h1 {
+    font-size: 3.5vw;
+  }
 }
 @media (max-width: 800px) {
   #corporation {
@@ -130,6 +137,13 @@ img {
     width: 27vw;
     height: 30vh;
     border-radius: 5px;
+  }
+
+  #release {
+    height: 54vh;
+  }
+  #release h1 {
+    font-size: 3.8vw;
   }
 }
 @media (max-width: 650px) {
@@ -150,6 +164,13 @@ img {
     width: 27vw;
     height: 25vh;
     border-radius: 5px;
+  }
+
+  #release {
+    height: 52vh;
+  }
+  #release h1 {
+    font-size: 4vw;
   }
 }
 @media (max-width: 500px) {
@@ -174,6 +195,13 @@ img {
     width: 32vw;
     height: 21vh;
     border-radius: 5px;
+  }
+
+  #release {
+    height: 48vh;
+  }
+  #release h1 {
+    font-size: 4vw;
   }
 }
 </style>
