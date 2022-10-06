@@ -19,7 +19,7 @@ The website offers a point of contact for SMEs that want to join the corporation
 
 ## Contexto del proyecto
 
-Functional Requirementes
+## Functional Requirementes
 
 Frontend:
 
@@ -37,7 +37,6 @@ Backend:
     A REST API must be built so that the front can consume the data.
     The API must allow performing a CRUD.
 
-​
 
 Extras requirements:
 
@@ -115,7 +114,7 @@ Develop branch: production word in this branch.
 
 ## Documentation
 
-- [Presentation PPTX](https://docs.google.com/presentation/d/1Zc2Ych_LMoZlomHBk4lKgpdKfuSpdepYfNJxhFhCJbE/edit?usp=sharing)
+- [Project](https://docs.google.com/document/d/1IRVNS3ypx5EiL-3-bowJrX5P6STYCfkLCm1ctaQSDPU/edit?usp=sharing)
 - [User Stories](https://docs.google.com/document/d/1bu1sXLucbUUZImvh2dEEr0OyieFw_CcoXwYy5K9okBg/edit?usp=sharing)
 - [Prototype](https://www.figma.com/file/SsQaavzZ0BiLUkSxbW59qx/Eco-World?node-id=0%3A1)
 - [UserFlow Figma](https://www.figma.com/file/SsQaavzZ0BiLUkSxbW59qx/Eco-World?node-id=16%3A4)
