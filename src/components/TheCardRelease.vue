@@ -1,29 +1,33 @@
 <script></script>
 
 <template>
-  <!-- card -->
-  <div class="card">
-    <img
-      src="../assets/img/tomate.jpg"
-      class="card-img-top h-50"
-      alt="product image"
-    />
+  <router-link to="/allproducts">
+    <!-- card -->
+    <div class="card">
+      <img
+        src="../assets/img/tomate.jpg"
+        class="card-img-top h-50"
+        alt="product image"
+      />
 
-    <!-- card body -->
-    <div
-      class="card-body h-50 d-flex flex-column justify-content-around align-items-start"
-    >
-      <h5 class="card-title fs-4 fw-bold">Red tomatoes</h5>
+      <!-- card body -->
+      <div
+        class="card-body h-50 d-flex flex-column justify-content-around align-items-start"
+      >
+        <h5 class="card-title fs-4 fw-bold">Red tomatoes</h5>
 
-      <p class="card-text">Fruits and vegetables</p>
+        <p class="card-text">Fruits and vegetables</p>
 
-      <p class="card-text">3.5€</p>
+        <p class="card-text">3.5€</p>
 
-      <div class="d-flex justify-content-center align-items-center w-100 mt-2">
-        <button type="button" class="btn">Buy</button>
+        <div
+          class="d-flex justify-content-center align-items-center w-100 mt-2"
+        >
+          <button type="button" class="btn">Buy</button>
+        </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <style scoped>
