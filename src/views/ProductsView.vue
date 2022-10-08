@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       input: "",
+      product: {},
       products: [],
       categories: [],
       categoriesState: [],
@@ -66,7 +67,12 @@ export default {
 
     <div>
       <div v-for="(product, index) in filterProducts()" :key="index">
-        <router-link :to="{ path: '/detail' }">
+        <router-link
+          :to="{
+            name: 'detail',
+            params: { name: product.name },
+          }"
+        >
           <p v-if="this.input.length > 0">
             {{ product.name }}
           </p>

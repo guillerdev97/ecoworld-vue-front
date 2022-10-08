@@ -16,23 +16,11 @@ export default {
 </script>
 
 <template>
-  <TheHeader
-    v-if="
-      this.$route.path != '/create' &&
-      this.$route.path != '/edit' &&
-      this.$route.path != '/'
-    "
-  />
+  <TheHeader v-if="this.$route.path != '/'" />
 
   <RouterView />
 
-  <TheFooter
-    v-if="
-      this.$route.path != '/create' &&
-      this.$route.path != '/edit' &&
-      this.$route.path != '/'
-    "
-  />
+  <TheFooter v-if="this.$route.path != '/'" />
 </template>
 
 <style></style>

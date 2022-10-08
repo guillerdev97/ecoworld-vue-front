@@ -101,7 +101,7 @@ export default {
       >
         ADD NEW PRODUCT
       </button>
-      <button class="cancel-button" @click="showModal = false">Cancelar</button>
+      <button class="red-button" @click="showModal = false">Cancelar</button>
     </div>
   </div>
 
@@ -112,16 +112,18 @@ export default {
 @import "../../assets/base.css";
 
 .modal-overlay {
+  width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   row-gap: 2vw;
   position: fixed;
-  top: 50vh;
+  top: 60vh;
   left: 50vw;
   transform: translate(-50%, -50%);
   color: white;
-  background-color: var(--beige-palette);
+  background-color: rgb(233, 202, 162);
   border: 1px solid #a5a2a9;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 3vh;
@@ -131,13 +133,40 @@ export default {
 .form-camp {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 20vw;
+  height: 4vh;
+}
+input {
+  
+  height: 3.5vh;
 }
 
-.cancel-button {
+.red-button {
   background-color: rgb(242, 25, 25);
+  padding: 0.5vw 0.5vw;
+  margin-top: 23px;
+  margin-left: 30px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1vw;
+  height: 6vh;
+  transition: all 0.2s ease-in;
+}
+.red-button:hover {
+  background-color: rgb(223, 15, 15);
+  box-shadow: 0 0 2px red;
 }
 .accept-button {
+  margin-right: 30px;
   background-color: green;
+  transition: all 0.2s ease-in;
+}
+.accept-button:hover {
+  background-color: rgb(1, 98, 1);
+  box-shadow: 0 0 2px green;
 }
 .modal-buttons {
   display: flex;
@@ -145,14 +174,13 @@ export default {
 }
 
 button {
-  margin-top: 10px;
-  background-color: white;
+  padding: 0.5vw 0.5vw;
+  margin-top: 8px;
+  color: white;
   border: none;
+  border-radius: 3px;
   font-weight: bold;
-  font-size: 1.3vw;
-}
-button:hover {
-  color: var(--green-palette);
-  text-decoration: underline;
+  font-size: 1vw;
+  background-color: var(--green-palette);
 }
 </style>

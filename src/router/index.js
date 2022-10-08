@@ -30,9 +30,10 @@ const router = createRouter({
       component: ProductsView,
     },
     {
-      path: "/detail",
+      path: "/detail/:name",
       name: "detail",
       component: DetailView,
+      props: true,
     },
     {
       path: "/cart",
