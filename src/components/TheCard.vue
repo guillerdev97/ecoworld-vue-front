@@ -130,7 +130,7 @@ export default {
 }
 a:hover {
   cursor: pointer;
-  font-size: 1.2vw;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.473);
 }
 
 /* media queries */

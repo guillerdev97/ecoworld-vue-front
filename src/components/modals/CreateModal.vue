@@ -123,7 +123,7 @@ export default {
   left: 50vw;
   transform: translate(-50%, -50%);
   color: white;
-  background-color: rgb(233, 202, 162);
+  background-color: #c9b68c;
   border: 1px solid #a5a2a9;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 3vh;
@@ -138,10 +138,15 @@ export default {
   height: 4vh;
 }
 input {
-  
+  font-size: 1vw;
+  padding: 0.3vw 0.5vw;
   height: 3.5vh;
+  outline: none;
 }
-
+input:focus {
+  border: 1px solid #c8a65cd1;
+  box-shadow: 0 0 0.5vw #c8a65cd1;
+}
 .red-button {
   background-color: rgb(242, 25, 25);
   padding: 0.5vw 0.5vw;
@@ -160,9 +165,11 @@ input {
   box-shadow: 0 0 2px red;
 }
 .accept-button {
+  font-size: 0.8vw !important;
   margin-right: 30px;
   background-color: green;
   transition: all 0.2s ease-in;
+  height: 6vh;
 }
 .accept-button:hover {
   background-color: rgb(1, 98, 1);
@@ -175,12 +182,79 @@ input {
 
 button {
   padding: 0.5vw 0.5vw;
-  margin-top: 8px;
+  margin-top: 20px;
   color: white;
   border: none;
   border-radius: 3px;
-  font-weight: bold;
-  font-size: 1vw;
+  font-size: 0.8vw;
   background-color: var(--green-palette);
+  transition: all 0.2s ease-in;
+}
+button:hover {
+  box-shadow: 0 0.2vw 0.4vw var(--green-palette);
+  letter-spacing: 0.1vw;
+}
+
+/* media queries */
+@media (max-width: 1000px) {
+  .modal-overlay {
+    width: 35vw;
+  }
+  .form-camp {
+    width: 25vw;
+    height: 4.5vh;
+  }
+  input {
+    font-size: 2vw;
+  }
+  .accept-button {
+    height: 6.5vh;
+  }
+  .red-button {
+    height: 6.5vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .modal-overlay {
+    width: 50vw;
+  }
+  .form-camp {
+    width: 40vw;
+    height: 7vh;
+  }
+  input {
+    font-size: 2.3vw;
+  }
+  .accept-button {
+    font-size: 2vw !important;
+    height: 6.5vh;
+  }
+  .red-button {
+    font-size: 2vw;
+    height: 6.5vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-overlay {
+    width: 60vw;
+    padding: 3vh;
+  }
+  .form-camp {
+    width: 40vw;
+    height: 7vh;
+  }
+  input {
+    font-size: 2.7vw;
+  }
+  .accept-button {
+    font-size: 2vw !important;
+    height: 5vh;
+  }
+  .red-button {
+    font-size: 2vw;
+    height: 5vh;
+  }
 }
 </style>

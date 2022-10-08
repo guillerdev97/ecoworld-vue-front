@@ -204,6 +204,7 @@ main {
 h1 {
   cursor: pointer;
   margin-bottom: 2vh;
+  text-decoration: underline;
 }
 h1:hover {
   color: var(--green-palette);
