@@ -35,6 +35,8 @@ export default {
         }
         alert("You have to choose a correct category name");
 
+        location.reload();
+
         return;
       }
 

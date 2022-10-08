@@ -28,11 +28,27 @@ export default {
 
   methods: {
     async editProduct() {
-      await apiProducts.update(this.form);
+      const verify = confirm("Are you sure you want to update this product?");
 
-      alert(`${this.product.name} has been updated`);
+      if (verify === true) {
+        if (
+          this.form.category === "Snacks and nuts" ||
+          this.form.category === "Fruits and vegetables" ||
+          this.form.category === "Meat and fish" ||
+          this.form.category === "Cereals and seeds"
+        ) {
+          await apiProducts.create(this.form);
 
-      location.reload();
+          alert(`${this.form.name} has been created`);
+
+          location.reload();
+        }
+        alert("You have to choose a correct category name");
+
+        location.reload();
+
+        return;
+      }
     },
   },
 };
