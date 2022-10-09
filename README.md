@@ -70,10 +70,6 @@ Clone the project
   git clone https://github.com/guillerdev97/ecoworld-vue-front.git
 ```
 
-Create a local database in phpMyAdmin with user: root, password: "".
-Name of the database: products.
-Execute migration: "php artisant migration:fresh --seed".
-
 Go to the project directory
 ```bash
   cd ecoworld-vue-front
@@ -81,15 +77,13 @@ Go to the project directory
 
 Install dependencies
 ```bash
-  composer update
   npm install
 ```
 
 Start the server
 ```bash
   run Apache and MySQL server in XAMPP
-  php artisan serve
-  npm run dev
+  run backend project spring boot
 ```
 
 ## Work methodology
