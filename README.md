@@ -114,8 +114,8 @@ Develop branch: production word in this branch.
 
 ## Documentation
 
-- [Project](https://docs.google.com/document/d/1IRVNS3ypx5EiL-3-bowJrX5P6STYCfkLCm1ctaQSDPU/edit?usp=sharing)
-- [Jira](https://jfba.atlassian.net/jira/software/projects/ECO/boards/4/roadmap)
+- [Project Documentation](https://docs.google.com/document/d/1IRVNS3ypx5EiL-3-bowJrX5P6STYCfkLCm1ctaQSDPU/edit?usp=sharing)
+- [Jira](https://docs.google.com/document/d/1vns9pYw-Y20vr_fFuWoNSeCj_CwwS2UkvuEIN1g1HJU/edit?usp=sharing)
 - [User Stories](https://docs.google.com/document/d/1bu1sXLucbUUZImvh2dEEr0OyieFw_CcoXwYy5K9okBg/edit?usp=sharing)
 - [Prototype](https://www.figma.com/file/SsQaavzZ0BiLUkSxbW59qx/Eco-World?node-id=0%3A1)
 - [UserFlow Figma](https://www.figma.com/file/SsQaavzZ0BiLUkSxbW59qx/Eco-World?node-id=16%3A4)
