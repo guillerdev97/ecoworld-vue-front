@@ -18,7 +18,7 @@
 
         <p class="card-text">Fruits and vegetables</p>
 
-        <p class="card-text">3.5€</p>
+        <p class="card-text">3.5€/kg</p>
 
         <div
           class="d-flex justify-content-center align-items-center w-100 mt-2"

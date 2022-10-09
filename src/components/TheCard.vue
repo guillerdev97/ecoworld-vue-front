@@ -74,7 +74,7 @@ export default {
         {{ product.category }}
       </p>
 
-      <p class="card-text">{{ product.price }}€</p>
+      <p class="card-text">{{ product.price }}€/kg</p>
 
       <div class="d-flex justify-content-between align-items-center w-100 mt-2">
         <button v-on:click="addProduct(product)" type="button" class="btn">
