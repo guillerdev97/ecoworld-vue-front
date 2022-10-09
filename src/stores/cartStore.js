@@ -25,6 +25,14 @@ export const cartStore = defineStore({
       return;
     },
 
+    clearCart() {
+      alert("Cart is clear!");
+
+      this.products = [];
+
+      location.reload();
+    },
+
     listProducts() {
       return this.products;
     },

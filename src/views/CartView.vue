@@ -1,5 +1,5 @@
 <script>
-import { mapState } from "pinia";
+import { mapState, mapActions } from "pinia";
 import { cartStore } from "../stores/cartStore.js";
 import TheCard from "../components/TheCard.vue";
 
@@ -35,6 +35,8 @@ export default {
 
       return;
     },
+
+    ...mapActions(cartStore, ["clearCart"]),
   },
 
   created() {
@@ -93,6 +95,7 @@ export default {
     </section>
 
     <button v-on:click="alert">CHECKOUT!</button>
+    <button v-on:click="clearCart" id="redButton">Clear Cart</button>
   </main>
 </template>
 
@@ -141,5 +144,9 @@ button {
   color: white;
   padding: 3px 5px;
   border: none;
+}
+
+#redButton {
+  background-color: red;
 }
 </style>
