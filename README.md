@@ -6,15 +6,15 @@ Eco World
 
 ## Project
 
-The idea of this website is that it is scalable, and that in the future, it can be a professional website.
+In a nutshell, this website aims to be a portal to advertise and buy and sell organic products from Asturias.
 
-On the other hand, the business logic is to sell ecological products, facilitating and putting Asturian SMEs and local stores in contact. It is a retail sale.
+I have designed and created a website for Eco Astur, a corporation of small companies (Asturian farms) that have joined together to promote their local businesses and encourage the consumption of organic products.
 
-The website belongs to the Asturian corporation of companies (SMEs), which have come together to give visibility to their products and strengthen their position against large companies.
+The philosophy or reason for the union is to have greater visibility against large companies.
 
-Asturian SMEs, farms and factories will be advertised on this website, and small local shops may purchase such products at retail.
+On the other hand, the business logic is clear, the sale of organic products to local stores.
 
-The website offers a point of contact for SMEs that want to join the corporation to do so.
+Finally, I present a totally initial mvp, since my intention is to make mvp to mvp a product as professional and scalable as possible, improving the implementations or incorporating new ones.
 
 
 ## Contexto del proyecto
