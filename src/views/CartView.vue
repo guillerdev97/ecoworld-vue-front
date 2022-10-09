@@ -8,6 +8,8 @@ export default {
 
   data() {
     return {
+      data: this.products,
+      price: 0,
       NUM_RESULTS: 6,
       pag: 1,
     };
@@ -21,6 +23,22 @@ export default {
     alert() {
       alert("This funcionality is in production...");
     },
+
+    totalPrice() {
+      if (this.products != undefined) {
+        this.products.forEach((product) => {
+          this.price = this.price + product.price;
+        });
+
+        return;
+      }
+
+      return;
+    },
+  },
+
+  created() {
+    this.totalPrice();
   },
 
   components: { TheCard },
@@ -29,6 +47,8 @@ export default {
 
 <template>
   <main>
+    <!-- price -->
+    <h1 class="w-100 text-center mt-3">TOTAL PRICE: {{ this.price }}€</h1>
     <!-- pagination section -->
     <section
       id="totalPagination"

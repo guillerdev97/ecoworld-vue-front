@@ -24,6 +24,7 @@ export const cartStore = defineStore({
 
       return;
     },
+
     listProducts() {
       return this.products;
     },
