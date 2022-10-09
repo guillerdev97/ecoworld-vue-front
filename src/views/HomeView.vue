@@ -30,7 +30,9 @@ export default {
     </div>
 
     <div id="img" class="d-flex justify-content-center align-items-center">
-      <img src="../assets/img/apple.jpeg" alt="apple" />
+      <router-link to="/allproducts"
+        ><img src="../assets/img/apple.jpeg" alt="apple"
+      /></router-link>
     </div>
   </section>
 
