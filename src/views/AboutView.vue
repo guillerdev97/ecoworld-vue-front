@@ -37,7 +37,9 @@ export default {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">REACH US</h5>
+              <h5 class="modal-title" id="exampleModalLabel">
+                REACH US - <span style="color: green">ECOWORLD</span>
+              </h5>
               <button
                 type="button"
                 class="btn-close"
@@ -49,7 +51,7 @@ export default {
               For more information send us an email and we will call you!
               <a
                 style="text-decoration: underline"
-                href="https://www.google.com/intl/es/gmail/about/"
+                href="mailto:ecoworld@gmail.com"
                 >click here</a
               >
             </div>
@@ -75,7 +77,9 @@ export default {
     </div>
 
     <div id="img" class="d-flex justify-content-center align-items-center">
-      <img src="../assets/img/apple.jpeg" alt="apple" />
+      <router-link to="/allproducts"
+        ><img src="../assets/img/apple.jpeg" alt="apple"
+      /></router-link>
     </div>
   </section>
 
@@ -84,14 +88,16 @@ export default {
     class="d-flex justify-content-around align-items-center"
   >
     <div id="img" class="d-flex justify-content-center align-items-center">
-      <img src="../assets/img/apple.jpeg" alt="apple" />
+      <router-link to="/allproducts"
+        ><img src="../assets/img/apple.jpeg" alt="apple"
+      /></router-link>
     </div>
 
     <div id="text" class="d-flex flex-column justify-content-center">
       <h1>What do <span id="green">we do?</span></h1>
 
       <p class="text-justify">
-        Ecoastur was born with an idea: to give visibility to organic food and
+        EcoAstur was born with an idea: to give visibility to organic food and
         make it accessible to any consumer in their usual place of purchase.
       </p>
     </div>
@@ -105,11 +111,13 @@ export default {
       <h1>How do <span id="green">we do?</span></h1>
 
       <p class="text-justify">
-        connecting small farms with small businesses and driving local growth
+        Connecting small farms with small businesses and driving local growth
       </p>
     </div>
     <div id="img" class="d-flex justify-content-center align-items-center">
-      <img src="../assets/img/apple.jpeg" alt="apple" />
+      <router-link to="/allproducts"
+        ><img src="../assets/img/apple.jpeg" alt="apple"
+      /></router-link>
     </div>
   </section>
 </template>
