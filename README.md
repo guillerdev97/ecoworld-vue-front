@@ -19,7 +19,7 @@ Finally, I present a totally initial mvp, since my intention is to make mvp to m
 
 ## Functional Requirementes
 
-Frontend:
+Frontend: [link to frontend project](https://github.com/guillerdev97/ecoworld-vue-front)
 
     The use of a framework is not mandatory but it is recommended (In the case of not using a framework, a packager should be used Eg: Parcel).
     The frontend will make requests to the REST API.
@@ -29,7 +29,7 @@ Frontend:
 
 ​
 
-Backend:
+Backend: [link to backend project](https://github.com/guillerdev97/ecoworld-vue-back)
 
     The backend part must be done with JAVA and using Springboot.
     A REST API must be built so that the front can consume the data.
