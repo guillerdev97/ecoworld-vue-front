@@ -17,8 +17,6 @@ On the other hand, the business logic is clear, the sale of organic products to 
 Finally, I present a totally initial mvp, since my intention is to make mvp to mvp a product as professional and scalable as possible, improving the implementations or incorporating new ones.
 
 
-## Contexto del proyecto
-
 ## Functional Requirementes
 
 Frontend:
@@ -102,7 +100,7 @@ Start the server
 
 
 ## Versions
-Main branch: stable work done in this branch.
+Main branch: stable work done in this branch.<br>
 Develop branch: production word in this branch.
 
 #### Tools and technologies used
